@@ -23,16 +23,21 @@ Just like riding a bicycle for the first time, it was really hard and awkward, b
 What I have here is a sample approach that will make you think about how to first write a test and then your code. Hopefully, will it demystify the TDD mythology and show how fun and simple it is.
 
 ### I want you to keep 4 rules in mind.
-1. **Write A Test**: Think about one atomic functionality, the happy path first. Write the test for it. Yes, you do not write the implementation so your test will fail, which is not only OK but this is the way TDD works.
-1. **Write A Method**: Write the code just to make the test pass. Do not optimize, do not refactor your code, we will do that later.
-1. **Repeat Step 1 and 2**: Until you cover all happy paths and exceptions.
-1. **Refactor, Optimize and Organize**: After you are finished, make your code better while running your tests.
+1. **Write A Test**: Think about one atomic functionality, the happy path first. Write the test for it. Yes, you do not write the implementation so your test will fail, which may not sound OK but this is the way TDD works.
+1. **Write An Implementation**: Write the code just to make the test pass. Do not optimize, do not refactor your code, we will do next.
+1. **Refactor And Optimize Your Code** Since the test are passing you can confidently improve and refactor your code if needed. Make sure you follow the refactoring patterns.
+1. **Repeat Steps 1, 2 and 3**: Until you cover all happy paths and exceptions.
+1. **Refactor, Optimize and Organize**: After you are finished a major functionality, make your code better while running your tests.
 
 I will share several examples of how to write unit tests. The way I wrote and organize my code or the tools that I use. This is my preferred way does not mean it the best way or the only right way to write code. It is up to you to find what best fits your needs, your coding style, your tools. However, you need to write the same code with your coding style and tools to understand the mechanism and how to think in TDD.
 
-The small code samples below illustrate the workings. It is meant to be a hands-on exercise. In each example please do read the README.md first. It has the details of the problem in the example and the steps on how to write the tests, the code, and finally how to refactor.
+The small code samples below illustrate the workings. It is meant to be a hands-on exercises. In each example please do read the README.md first. It has the details of the problem in the example and the steps on how to write the tests, the code, and finally how to refactor. Factorial is step by step, Histogram shows the tests, and it is a good review after you are done with Factorial.
 
-TODO Factorial Example
-TODO Histogram Example
+(Factorial Example)[https://github.com/kemapak/factorial-tdd]
+(Histogram Example)[https://github.com/kemapak/histogram-tdd]
+
+Happy coding
+
+Kem
 
 
