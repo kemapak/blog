@@ -1,4 +1,4 @@
-# Unit Testing Design Patterns
+# Unit Test Design Patterns
 
 > "It is better not to have any tests than having unreliable tests."
 
