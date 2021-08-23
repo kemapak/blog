@@ -33,8 +33,9 @@ I will share several examples of how to write unit tests. The way I wrote and or
 
 The small code samples below illustrate the workings. It is meant to be a hands-on exercises. In each example please do read the README.md first. It has the details of the problem in the example and the steps on how to write the tests, the code, and finally how to refactor. Factorial is step by step, Histogram shows the tests, and it is a good review after you are done with Factorial.
 
-(Factorial Example)[https://github.com/kemapak/factorial-tdd]
-(Histogram Example)[https://github.com/kemapak/histogram-tdd]
+[Factorial Example](https://github.com/kemapak/factorial-tdd)
+
+[Histogram Example](https://github.com/kemapak/histogram-tdd)
 
 Happy coding
 
