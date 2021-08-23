@@ -2,11 +2,13 @@
 
 > "It is better not to have any tests than having unreliable tests."
 
-So here I am trying to advocate writing good tests and asking you not to write tests just for the sake writing tests. The question is does tests improves quality of our code? The answer in my opinion is only good tests result in good code. Bad tests will only give you a false and very dangerous confidence with nice code coverage report.
+So here I am trying to advocate writing good tests and asking you not to write tests just for the sake writing tests. The question is, does unit tests improves quality of our code? The answer in my opinion is only good tests will result in good code. Bad tests will only give us a false and very dangerous confidence, with a nice code coverage report.
 
 This document try's to explain automated unit testing design patterns and concepts. The expectation with these patterns is to make test more robust, simple, and do depict the functionality, state, and behavior of our code.
 
 > Remember: **Unit test are written to prevent bugs, not to catch them.**
+
+> Unit Test Flow: **Setup -> Execution -> Verification**
 
 ## Benefits and Characteristics
 
@@ -15,7 +17,7 @@ This document try's to explain automated unit testing design patterns and concep
 1. Be resilient: always return what is expected in single or multiple runs.
 1. Allow refactoring safely and with confidence.
 1. Force good code design.
-1. Document the system and the code, and its contract.
+1. Document the system and the code. In other words; its contract.
 
 ## Terms
 
@@ -48,9 +50,7 @@ System Under Test - Primary Object
 System, Component, Class Under Test. In other words Primary Object of the test.
 
 ### Collaborator	
-Secondary Objects
-			
-Secondary component, class, method that helps to the test the SUT. In other words Secondary Object(s) of the test.
+Secondary objects, secondary components, classes, methods that helps us to the test the SUT. 
 
 Usually mocked, stubbed, or spied.
 		
@@ -82,7 +82,7 @@ _For example_:
 ### Stub
 Mimics actual objects and their data. Generally used to verify state.
 
-If you want to have a database on memory (using JS Maps, with save, get, delete methods). This is also called a Fake. 
+If you want to have a database on memory (use JS Maps, with save, get, delete methods). This is also called a Fake. 
 
 If you want to replace real rest calls with stubs mimicking a server.
 
@@ -94,7 +94,7 @@ The return value of the spied method is not irrelevant.
 If the return value is important than you need to use a mock.
 
 ### Mocks
-They are used to test behavior as well. They are similar to stubs but the called methods are pre-programmed with expectations, which form a specification of the calls they receive. In other words, mock objects and their methods are pre-programmed for specific calls to verify the behavior.
+They are used to test behavior. They are similar to stubs but the called methods are pre-programmed with expectations, which form a specification of the calls they receive. In other words, mock objects and their methods are pre-programmed for specific calls to verify the behavior.
 
 ### Test Driven Development
 Writing tests first with respect to the functionality desired, then writing enough code to pass the test before writing the next test/functionality.
@@ -106,7 +106,7 @@ Very similar to TDD but when writing test we indicate the expected behavior.
 
 _For example_: `it should return the sum of 4 when 2 + 2 is passed as a parameter`
 
-It is the wording but enables to read your test like regular sentences.
+It is the wording but enables us to read tests like regular sentences.
 
 ### Code Coverage
 The measurement of the code tested in a code group. Including if each function/method is called, if each statement is executed, if each conditional (and therefore branch) statement executed.
