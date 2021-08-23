@@ -8,7 +8,7 @@ This document try's to explain automated unit testing design patterns and concep
 
 > Remember: **Unit test are written to prevent bugs, not to catch them.**
 
-> Unit Test Flow: **Setup -> Execution -> Verification**
+> Unit Test Flow: **Setup -> Execution -> Verification -> Teardown**
 
 ## Benefits and Characteristics
 
