@@ -24,7 +24,7 @@ This document try's to explain automated unit testing design patterns and concep
 ### Unit of Code
 A cohesive chunk of code.
 
-The recommended size is 33 lines of statements. (Excluding, comments, declarations, imports, and exports)
+The recommended size is 33 lines of statements. (Excluding, white space, comments, declarations, imports, and exports)
 
 ### Cohesion
 Measurement of the atomic functionality of a code group. (Function, method). 
