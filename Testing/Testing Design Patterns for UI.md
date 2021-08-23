@@ -1,4 +1,4 @@
-# UI Unit Testing Design Patterns
+# Unit Testing Design Patterns
 
 > "It is better not to have any tests than having unreliable tests."
 
@@ -319,7 +319,7 @@ expect.fail("Unfinished Test!");
 ```
 
 
-## Testing Trouble Shooting
+## Trouble Shooting
 
 ### When the code is hard to test
 
