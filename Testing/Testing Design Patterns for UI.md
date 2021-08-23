@@ -1,6 +1,6 @@
 # UI Unit Testing Design Patterns
 
-{{TOC}}
+{:toc}
 
 > "It is better not to have any tests than having unreliable tests."
 
