@@ -283,7 +283,8 @@ it ("Address should have type home", function(){
 let address = new Address({...});
 
 try {
- expect(typeof address.type).to.be.equal("string"); expect(address.type).to.be.equal("home");
+ expect(typeof address.type).to.be.equal("string");
+ expect(address.type).to.be.equal("home");
 } catch (e) {
  expect.fail("Not a valid address!");
 }
@@ -301,7 +302,8 @@ it ("Address should have type home", function(){
 let address = new Address({...});
 
 expect(address).to.be.a.validAddress();
-expect(typeof address.type).to.be.equal("string"); expect(address.type).to.be.equal("home");
+expect(typeof address.type).to.be.equal("string");
+expect(address.type).to.be.equal("home");
 }
 ```
 
@@ -327,7 +329,6 @@ expect.fail("Unfinished Test!");
 |:--|:--|
 |The development code is very large and complex. The unit code is too large, methods perform multiple tasks and are not cohesive. Dependencies are not easy to mock | Development needs to refactor the actual code.|
 |Testing asynchronous non-blocking UI functionality| Use async/await, callback in your tests.|
-|||
 
 ### When the Test is hard to understand
 
@@ -348,16 +349,13 @@ expect.fail("Unfinished Test!");
 |The test fails when SUT changes | If the actual component changes, your tests might fail, update your tests.|
 |The test fails when dependencies are changed.|In unit test dependencies needs to mocked.|
 |The test fails when run out of order|The test needs to be isolated and able to run independently|
-|The test fails erratically.
-Sometimes it passes sometimes and other fails.|Fixtures are not fresh. New tests are needed to check the state of SUT.
-Collaborators / Secondary Objects needs to be stable and predictable. Tests use explicit waits, pauses; convert them to async / await or smart waits.|
+|The test fails erratically. Sometimes it passes sometimes and other fails.| Fixtures are not fresh. New tests are needed to check the state of SUT. Collaborators / Secondary Objects needs to be stable and predictable. Tests use explicit waits, pauses; convert them to async / await or smart waits.|
 
 ### When there are Code and Configuration Leaks
 
 |Problem|Solution|
 |:--|:--|
-|Test configuration or test code is published to production.
-|Test code and configuration should not be leaked to production. Change your code.|
+|Test configuration or test code is published to production. |Test code and configuration should not be leaked to production. Change your code.|
 
 ### When there are too many Assertions
 
@@ -375,8 +373,7 @@ Collaborators / Secondary Objects needs to be stable and predictable. Tests use 
 
 |Problem|Solution|
 |:--|:--|
-|Your test code must be deterministic. It is OK to test if a method throws an exception but it is not OK to use try and catch in your test code.
-Solution| **Do not use try and catch.** Use Custom and Guarded Assertion patterns|
+|Your test code must be deterministic. It is OK to test if a method throws an exception but it is not OK to use try and catch in your test code. | **Do not use try and catch.** Use Custom and Guarded Assertion patterns|
 
 ### When the tests are slow.
 
