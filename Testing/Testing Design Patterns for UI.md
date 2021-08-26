@@ -99,12 +99,29 @@ They are used to test behavior. They are similar to stubs but the called methods
 ### Test Driven Development
 Writing tests first with respect to the functionality desired, then writing enough code to pass the test before writing the next test/functionality.
 
-_For example_: `test sum 2 + 2 is 4`
-
 ### Behavior Driven Development
-Very similar to TDD but when writing test we indicate the expected behavior.
+Very similar to TDD but when writing test we indicate the expected behavior. 
 
-_For example_: `it should return the sum of 4 when 2 + 2 is passed as a parameter`
+Follows the format to create English like sentences to describe the test cases.
+- Given
+- When
+- Then
+
+_For example_: We can write our test cases like below without BDD.
+
+```
+describe('Test math util class',...
+  test('Math.sum(2 + 2) = 4', ...
+```
+
+_For example_: The same test could be written in BDD as follows. Which easier to understand and is prefarable.
+
+```
+describe('Given two parameters,' ...
+    test('When we add numbers 2 and 2 then it should return 4'...
+    test('When we add 2 and "z" then it should throw an exception'...    
+```
+
 
 It is the wording but enables us to read tests like regular sentences.
 
