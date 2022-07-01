@@ -6,6 +6,10 @@ So here I am trying to advocate writing good tests and asking you not to write t
 
 This document tries to explain automated unit testing design patterns and concepts. The expectation with these patterns is to make test more robust, simple, and do depict the functionality, state, and behavior of our code.
 
+## Dilemma
+
+Who will test the test code?
+
 > Remember: **Unit test are written to prevent bugs, not to catch them.**
 
 > Unit Test Flow: **Setup -> Execution -> Verification -> Teardown**
@@ -13,11 +17,11 @@ This document tries to explain automated unit testing design patterns and concep
 ## Benefits and Characteristics
 
 1. Verify correct behavior and state; in other words both positive and negative. 
-1. Be predictable and stable: always return what is expected.
-1. Be resilient: always return what is expected in single or multiple runs.
-1. Allow refactoring safely and with confidence.
-1. Force good code design.
-1. Document the system and the code. In other words; it's contract of your system.
+2. Be predictable and stable: always return what is expected.
+3. Be resilient: always return what is expected in single or multiple runs.
+4. Allow refactoring safely and with confidence.
+5. Force good code design.
+6. Document the system and the code. In other words; it's contract of your system.
 
 ## Terms
 
@@ -135,14 +139,14 @@ The measurement of the code tested in a code group. Including if each function/m
 ## Patterns
 
 ### Pauses or Delay (anti-pattern)
-Do not use artificial pauses, explicit waits, sleeps. This will make your test more fragile. Use framework given smart waits, implicit waits, async/wait. If the code for some reason does not execute the system wide timeout will kick in.
+Do not use artificial pauses, explicit waits, sleeps. This will make your test more fragile. Use framework given smart waits, implicit waits, async/wait. If the code for some reason does not execute, the system wide timeout will kick in.
 
 _For example_: `sleep(300);`
 
 ### Fixture Management 
 #### Setup 
 ##### Inline Setup
-If the fixture is simple, it does not need to be used in multiple test cases. The fixture is created inside a test case. 
+If the fixture is simple, if it does not need to be used in multiple test cases. The fixture is created inside a test case. 
 TODO: Add example;
 
 ##### Implicit Setup (Test Suite)
@@ -172,7 +176,7 @@ If no explicit teardown is necessary the garbage collector destroys the fixture.
 **For fixtures created in test suites setup it is not recommended.**
 
 #### Test Value Management
-This pattern is used for managing values that in tests; for fixtures, and in exercising and verification stages. Sometimes using helper methods could make the code simpler and more descriptive.
+This pattern is used for managing values that in tests; for fixtures, and in execution and verification stages. Sometimes using helper methods could make the code simpler and more descriptive.
 
 ##### Literal
 When you use literal constants in the tests to set up, exercise, and verify your code, you can use value literals. Literal values are clear to humans about the intention.
@@ -181,6 +185,7 @@ On the other hand, hardcoded literals usually make it harder to understand the i
 _For example_:
 
 ```javascript
+// Calendar Event.
 this.itemTitle = 'Meeting with Steve'; 
 this.expanded = false;
 ```
@@ -234,7 +239,7 @@ warehouse.addProduct('Drink', 'Pepsi', 2);
 warehouse.orderProducts('Drink');
 
 // Verifies the difference or the delta remaining items.
-expect.equal(8, warehouse.getInventory("Pepsi");
+expect.equal(8, warehouse.getInventory("Pepsi"));
 ```
 
 ##### Behavior Assertion
@@ -244,13 +249,17 @@ _For example_:
 
 ```javascript
 // Example from sinonjs.org
-require("@fatso83/mini-mocha").install(); const sinon = require("sinon");
+require("@fatso83/mini-mocha").install(); 
+const sinon = require("sinon");
 const PubSub = require("pubsub-js");
-const referee = require("@sinonjs/referee"); describe("PubSub", function() {
-it("should call subscribers on publish", function() { const callback = sinon.spy();
-          PubSub.subscribe("message", callback);
-          PubSub.publishSync("message");
-expect(callback.called).to.be.true; });
+const referee = require("@sinonjs/referee"); 
+
+describe("PubSub", function() {
+it("should call subscribers on publish", function() { 
+    const callback = sinon.spy();
+    PubSub.subscribe("message", callback);
+    PubSub.publishSync("message");
+    expect(callback.called).to.be.true; });
 });
 ```
 
@@ -264,15 +273,15 @@ _For example_:(anti-pattern)
 // Address set using inline pattern.
 it ("Address should have type home", function(){
 
- let address = new Address({...});
+    let address = new Address({...});
 
- // Check if address if not null.
-if (null !== address || "undefined" !== typeof address || null !== address.type || "undefined" !== typeof address.type || "string") {
- expect.fail("Not a valid Address.");
-}
+    // Check if address if not null.
+    if (null !== address || "undefined" !== typeof address || null !== address.type || "undefined" !== typeof address.type || "string") {
+        expect.fail("Not a valid Address.");
+    }
 
- expect(typeof address.type).to.be.equal("string");
- expect(address.type).to.be.equal("home");
+    expect(typeof address.type).to.be.equal("string");
+    expect(address.type).to.be.equal("home");
 }
 ```
 
@@ -280,12 +289,12 @@ _For example_: (with custom assertion)
 
 ```javascript
 it ("Address should have type home", function(){
- // Address set using inline pattern.
- let address = new Address({...});
- 
- expect(address).to.be.a.validAddress();
- expect(typeof address.type).to.be.equal("string");
- expect(address.type).to.be.equal("home");
+     // Address set using inline pattern.
+     let address = new Address({...});
+     
+     expect(address).to.be.a.validAddress();
+     expect(typeof address.type).to.be.equal("string");
+     expect(address.type).to.be.equal("home");
 }
 ```
 
@@ -300,15 +309,15 @@ _For example_: (anti-pattern)
 ```javascript
 // Anti-pattern. DO NOT WRITE YOUR TESTS LIKE THIS.
 it ("Address should have type home", function(){
-// Address set using inline pattern.
-let address = new Address({...});
-
-try {
- expect(typeof address.type).to.be.equal("string");
- expect(address.type).to.be.equal("home");
-} catch (e) {
- expect.fail("Not a valid address!");
-}
+    // Address set using inline pattern.
+    let address = new Address({...});
+    
+    try {
+     expect(typeof address.type).to.be.equal("string");
+     expect(address.type).to.be.equal("home");
+    } catch (e) {
+     expect.fail("Not a valid address!");
+    }
 });
 ```
 
@@ -319,12 +328,12 @@ _For example_: (with guarded assertion)
 ```javascript
 it ("Address should have type home", function(){ 
 
-// Address set using inline pattern.
-let address = new Address({...});
+    // Address set using inline pattern.
+    let address = new Address({...});
 
-expect(address).to.be.a.validAddress();
-expect(typeof address.type).to.be.equal("string");
-expect(address.type).to.be.equal("home");
+    expect(address).to.be.a.validAddress();
+    expect(typeof address.type).to.be.equal("string");
+    expect(address.type).to.be.equal("home");
 }
 ```
 
@@ -336,13 +345,24 @@ _For example_:
 ```javascript
 it ("Should fail since the test code is not written or complete.", function() {
 
-// TODO implement the test code.
-expect.fail("Unfinished Test!");
+    // TODO implement the test code.
+    expect.fail("Unfinished Test!");
 });
 ```
 
 
 ## Trouble Shooting
+
+### Before checking anything make sure
+
+- Make sure you follow the coding standards.
+- Lint your code.
+- Do not write large bulky code.
+- Keep cohesion and coupling always in mind.
+- Avoid dependencies and mock them.
+- Write small tests
+- Write and use utility methods.
+- Write and use custom assertions.
 
 ### When the code is hard to test
 
@@ -409,15 +429,4 @@ expect.fail("Unfinished Test!");
 - [Mocks Aren't Stubs](https://martinfowler.com/articles/mocksArentStubs.html)
 - [Automated Testing Patterns and Smells](https://www.youtube.com/watch?v=Pq6LHFM4JvE) (**Video**)
 
-## Dilema
 
-Who will test the test code?
-
-- Make sure you follow the coding standards.
-- Lint your code.
-- Do not write large bulky code.
-- Keep cohesion and coupling always in mind.
-- Avoid dependencies and mock them.
-- Write small tests
-- Write and use utility methods.
-- Write and use custom assertions.
