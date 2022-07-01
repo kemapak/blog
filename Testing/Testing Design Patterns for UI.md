@@ -4,7 +4,7 @@
 
 So here I am trying to advocate writing good tests and asking you not to write tests just for the sake writing tests. The question is, does unit tests improves quality of our code? The answer in my opinion is only good tests will result in good code. Bad tests will only give us a false and very dangerous confidence, with a nice code coverage report.
 
-This document try's to explain automated unit testing design patterns and concepts. The expectation with these patterns is to make test more robust, simple, and do depict the functionality, state, and behavior of our code.
+This document tries to explain automated unit testing design patterns and concepts. The expectation with these patterns is to make test more robust, simple, and do depict the functionality, state, and behavior of our code.
 
 > Remember: **Unit test are written to prevent bugs, not to catch them.**
 
@@ -17,7 +17,7 @@ This document try's to explain automated unit testing design patterns and concep
 1. Be resilient: always return what is expected in single or multiple runs.
 1. Allow refactoring safely and with confidence.
 1. Force good code design.
-1. Document the system and the code. In other words; its contract.
+1. Document the system and the code. In other words; it's contract of your system.
 
 ## Terms
 
@@ -29,7 +29,7 @@ The recommended size is 33 lines of statements. (Excluding, white space, comment
 ### Cohesion
 Measurement of the atomic functionality of a code group. (Function, method). 
 
-A method, the function should do one and only one thing. Strong cohesion indicates robust and maintainable code.
+A method, a function should do one and only one thing. Strong cohesion indicates robust and maintainable code.
 
 ### Coupling
 Measurement of the dependency of a code group to another. Most of the time dependencies in code cannot be avoided but there are several design patterns that help to manage de as dependency injection, avoiding internal instantiation of dependent classes, etc.
@@ -79,10 +79,12 @@ _For example_:
 </tablist>
 ```
 
-### Stub
-Mimics actual objects and their data. Generally used to verify state.
+### Stub (Fake)
+Mimics actual objects and their data. Generally used to verify state. 
 
-If you want to have a database on memory (use JS Maps, with save, get, delete methods). This is also called a Fake. 
+It is also called a Fake.
+
+If you want to have a database on memory (use JS Maps, with save, get, delete methods).  
 
 If you want to replace real rest calls with stubs mimicking a server.
 
@@ -94,7 +96,9 @@ The return value of the spied method is not irrelevant.
 If the return value is important than you need to use a mock.
 
 ### Mocks
-They are used to test behavior. They are similar to stubs but the called methods are pre-programmed with expectations, which form a specification of the calls they receive. In other words, mock objects and their methods are pre-programmed for specific calls to verify the behavior.
+They are used to test the behavior. They are similar to stubs but the called methods are pre-programmed with expectations, which form a specification of the calls they receive. In other words, mock objects and their methods are pre-programmed for specific calls to verify the behavior.
+
+_For example_: A method that writes to a file.
 
 ### Test Driven Development
 Writing tests first with respect to the functionality desired, then writing enough code to pass the test before writing the next test/functionality.
