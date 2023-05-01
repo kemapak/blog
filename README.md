@@ -2,8 +2,8 @@
 
 Things I think and share that no one reads or cares
 
-Things I complain and bear that no agrees or share
+Things I do complain that no agrees or shares
 
-But I do care and want to share both my mistakes and my flare.
+I think good code and architecture do matters so share both my mistakes and my flare.
 
-Kem
+Kem ;)
