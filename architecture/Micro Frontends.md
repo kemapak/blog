@@ -1,6 +1,6 @@
 # Micro Frontends
 
-## Introduction
+## Introductiong
 
 ## Current UI architectural patterns
 
