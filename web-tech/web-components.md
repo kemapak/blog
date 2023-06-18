@@ -9,6 +9,8 @@ You can easily see a web based application or page consists of thousands of line
 > CVS Specialty consists of more than **3K lines of HTML code**.
 > Apple landing page consists of **just over 1K lines of HTML code**.
 
+With web components we can drastically reduce the main HTML code, modularize it. Make it way easier to maintain.  
+
 We do need more HTML tags, custom elements, controls to build our pages, our applications. Even HTML is way better now; and we have quite a few new useful tags like; dialog, calendar (input date), expand/collapse (detail/summary) it is still not enough and never will be. We do need custom tags!
 
 Large monolithic HTML pages, web based applications are definitely not easy to maintain, to understand, easy to isolate and fix issues. When we add styling, accessibility and functionality on top of it becomes a nightmare. It is just yucky, very yucky!
@@ -37,6 +39,7 @@ It took sometime for all the browser support web components, but now they all do
 
 ## Why does it matter?
 - Modular encapsulated code.
+- Reduce the main HTML code drastically.
 - Declarative HTML. `<my-chart></my-chart>`
 - Extendable HTML. `<ul is="my-tree">...</ul>`
 - Encapsulated or open. (Shadow DOM)
@@ -45,6 +48,9 @@ It took sometime for all the browser support web components, but now they all do
 - Easier to enhance and update.
 - Easier to isolate and fix issues
 - Make changes from one place, centrally.
+- Make our applications load way faster.
+- Easier to make it accessible.
+- Easier to test.
 - Simpler architecture.
 - Pleasure to design and develop.
 
