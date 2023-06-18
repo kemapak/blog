@@ -92,14 +92,19 @@ class CustomComponent extends HTMLElement {
         <!-- :host is the style of the root element of your web component. -->
     `;
     
-    constructore() {
+    constructor() {
     
         super();
         
         this.#template.innerHTML = this.#templateMarkup;
-        this.shadowRoot.appendChild(this.#template.content.cloneNode(true));
         
         // this.shadowRoot is like your document object in your main HTML page.
+        this.shadowRoot.appendChild(this.#template.content.cloneNode(true));
+        
+        /*
+            If you do not add shadowRoot the page will have full access to your child template, CSS and JavaScript.
+            This migth be necessary if you migrating from monolotic UI, and if you are building a design system.
+         */   
     }
     
     connectedCallback() {
