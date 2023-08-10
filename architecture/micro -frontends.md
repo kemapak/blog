@@ -9,7 +9,8 @@ Like anything in software development, micro frontend is not a silver bullet and
 
 Micro frontend is inspired by micro services.
 
-## Current UI architectural patterns
+## UI architectural patterns
+
 
 ### Single page applications, thin client
 This is currently the most popular way of doing UI development. All the content, HTML, JavaScript, CSS are loaded into browser and then rendered. Routing, is the responsibility of the code in the browser, also JavaScript is used to get and submit data, content. This works very well but loading all the content initially, and rendering is slow. Angular, React, Backbone are some of the frameworks that are used for this type approach. All the static assets (JavaScript, CSS, images, config, templates, etc.) are served by a content delivery network (CDN)
@@ -23,7 +24,6 @@ This approach mixes server side rendering for strategic pages (login, home page,
 ### Desktop applications, mobile applications, thick client
 Browser based application can be converted to desktop application, and installed on user machines. This code lives in the user machine. JavaScript again is used to get data, content. This fast but the problem is updating the application code, and need of an install. Electron, Cordova are some of the tools that are used to do this. This approach is used for both desktop and mobile devices. All the static assets (JavaScript, CSS, images, config, templates, etc.) are bundled within the app as well as the dynamic assets (HTML).
 
-A new approach _Progressive Web Apps_ (PWA) which you can install a web app into a mobile device without the need of tools .
-
+A new approach _Progressive Web Apps_ (PWA) which you can install a web app into a mobile device without the need of tools.
 
 ## Micro Frontend architecture pattern
