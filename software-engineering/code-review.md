@@ -23,19 +23,19 @@ There is nothing equal a team review their own code together. Said that time wil
 TODO
 
 ## Code review items
-### Naming is everything
+### Naming. Naming is everything
 ### Unit of code. Small is always better
 ### Cyclomatic complexity. Simple is always better
 ### Unit Tests. Test first, code later (TDD, test driven development)
-### Comments. What to say? Silence is golden.
+### Comments. What to say and when to say it? Is silence golden?
 ### `Readme.md` What and how to document!
 ### Function, Methods. Are you cohesive enough.
 ### Dependency handling. Let's decouple!
 ### Exception and Error handling. How to handle punches!
-### Defensive coding. Let's do some karate!
+### Defensive coding. Let's do some aikido!
 ### Classes. Who are you, what can you do? 
 ### Interfaces. Let's add some behavior to make you a superman!
-### Constants, variables and class properties. What are you?
+### Constants, variables and class properties. What are you, who are you?
 ### Public, Private or Static. Now you see me or may be not!
 ### Inheritance. Not all inheritance make you rich!
 ### Design Patterns. Software is life!
