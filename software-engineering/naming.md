@@ -48,14 +48,14 @@ _For example:_
 
 ## [N7] Folders names must be lower case, words separated by '-' dashes.
 
-- [N-HTML]
+## [N-HTML]
 	- File names must be lower case, words separated by '-' dashes.
 	- All tags must be lower case, words separated by '-' dashes. (Web components)
 	- All properties must be lower case, words separated by '-' dashes.
-- [N-CSS]
+## [N-CSS]
 	- File names must be lower case, words separated by '-' dashes.
 	- Selector (Class) names must be lower case, words separated by '-' dashes.
-- [N-JavaScript/TypeScript]
+## [N-JavaScript/TypeScript]
 	- File names must be camel case. Class file names must start with uppercase.
 	- Class names must be camel case, first letter must be uppercase.
 	- Method, function, variable names must camel case, first letter must be lower case.
