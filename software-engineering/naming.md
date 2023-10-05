@@ -2,27 +2,35 @@
 
 “You should name a variable using the same care with which you name a firstborn child.” - James O. Coplien [1](#cite01)
 
-Human being identify everything by names. Naming is the most important aspect of coding.
+Human beings identify everything by their names. Naming is the most important aspect of coding. Most important aspect of code documentation is good, simple, understandable names.
 
 So our classes, methods, members, functions, modules, variables, constants, properties names must be named clearly, understandably.
 
 ## [N1] Never use abbreviations unless agreed by the entire team and documented in as a list.
 
-_For example:_ 
+_For example:_
 
 `db` is this a date of birth, or a database?
 
 **Abbreviations in names must follow the language specified naming conventions.**
 
-_For example:_ `mainPageUrl` in JavaScript. `.main-url` in CSS.
+`mainPageUrl` in JavaScript. `.main-page-url` in CSS.
+
+The team needs to create and maintain a list of abbreviations which is allowed to be used.
+
+| Abbreviation | Name | Comments |
+|:--|:--|:--|
+| Usr | User | User prefix. |
+| Num | Number | - |
+| Url | Uniform Resource Locator | Address, location of assets and services |
 
 ## [N2] Never use single letters for indexes or variables. Give meaningful names.
 
 _For example:_
 
-`for (let i=0; I < collection; I++) {...}` **this is bad!**
+`for (let i=0; i < collection; i++) {...}` **this is really bad! What is index, what is collection?**
 
-`for (let userIndex=0, numberOfUsers = users.length; userIndex < numberOfUsers; userIndex++) {...}` **this is good!**
+`for (let userIndex=0, numberOfUsers = users.length; userIndex < numberOfUsers; userIndex++) {...}` **this is good and clear!**
 
 ## [N3] Do not use similar variable names.
 
@@ -32,7 +40,7 @@ _For example:_
 
 ## [N4] Use English or any other language that you are using to name variables, do not add types, objects type indicators.
 
-_For example:_ 
+_For example:_
 
 `intAccount`, this should be `accountNumber`.
 
@@ -48,20 +56,21 @@ _For example:_
 
 ## [N7] Folders names must be lower case, words separated by '-' dashes.
 
-## [N-HTML]
+## [N-HTML] HTML
 	- File names must be lower case, words separated by '-' dashes.
 	- All tags must be lower case, words separated by '-' dashes. (Web components)
 	- All properties must be lower case, words separated by '-' dashes.
-## [N-CSS]
+
+## [N-CSS] CSS
 	- File names must be lower case, words separated by '-' dashes.
 	- Selector (Class) names must be lower case, words separated by '-' dashes.
-## [N-JavaScript/TypeScript]
-	- File names must be camel case. Class file names must start with uppercase.
-	- Class names must be camel case, first letter must be uppercase.
+
+## [N-JavaScript] JavaScript (Applicable to TypeScript)
+	- File names must be camel case. 
+	- Class file names must start with uppercase.
 	- Method, function, variable names must camel case, first letter must be lower case.
-	- Constants names must be all upper case, words separated by '-' dashes.
+	- Constants names must be all upper case, words separated by '-' dashes. (except imports)
 
 ## References
 
 1. <a id="cite01"></a>Clean Code by Robert C. Martin, Introduction
-
