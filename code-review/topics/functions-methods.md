@@ -22,6 +22,8 @@ break it up.
 If you have multiple conditionals, loops you most probably are not cohesive. Move them to new
 functions and give them logical names.
 
+Avoid side effects, functions must either do something or answer a question not both.
+
 ## [FM3] Manage dependencies, loose coupling
 
 Any code that has dependencies are more complex, harder to maintain. Reduce dependencies as much as 
