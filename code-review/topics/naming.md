@@ -7,9 +7,11 @@
 “Don’t be afraid to make a name long. A long descriptive name is better 
 than a short enigmatic name.” [2](#cite02)
 
-Human beings identify everything by their names. Naming is the most important aspect of coding. Most important aspect of code documentation is good, simple, understandable names.
+Human beings identify everything by their names. Naming is the most important aspect of coding. 
+Most important aspect of code documentation is good, simple, understandable names.
 
-So our classes, methods, members, functions, modules, variables, constants, properties names must be named clearly, understandably.
+So our classes, methods, members, functions, modules, variables, constants, properties names 
+must be named indicate it's purpose clearly.
 
 ## [N2] Do not use abbreviations unless agreed by the entire team and documented as a list.
 
