@@ -50,7 +50,22 @@ class Insurance {
 }
 ```
 
-## [ERR2] Use good, understandable error messages avoid using error codes.
+## [ERR2] Extract try and catch blocks out into functions of their own.
+
+Your intent will be clear as well as your code.
+
+_For example:_
+
+```
+try {
+    deleteUserReferences(userId);
+}
+catch (e) {
+    ....
+}
+```
+
+## [ERR3] Use good, understandable error messages avoid using error codes.
 
 Your error message should be understandable, and the developer to isolate the issue. Avoid using 
 generic messages.
