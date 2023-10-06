@@ -31,7 +31,7 @@ TODO
 - `Readme.md` What and how to document!
 - [Function, Methods](./topics/functions-methods.md). Are you cohesive enough.
 - Dependency handling. Let's decouple!
-- Exception and Error handling. How to handle punches!
+- [Exception and Error handling](./topics/exception-and-error-handling.md). How to handle punches!
 - Defensive coding. Let's do some aikido!
 - Classes. Who are you, what can you do? 
 - Interfaces. Let's add some behavior to make you a superman!
