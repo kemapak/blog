@@ -22,7 +22,7 @@ There is nothing equal a team review their own code together. Said that time wil
 ## Code review process
 TODO
 
-## Code review items
+## Code review topics
 - [Naming](./topics/naming.md). Naming is everything
 - Unit of code. Small is always better
 - Cyclomatic complexity. Simple is always better
