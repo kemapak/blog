@@ -2,11 +2,16 @@
 
 “You should name a variable using the same care with which you name a firstborn child.” - James O. Coplien [1](#cite01)
 
+## [N1] Use good understandable names
+
+“Don’t be afraid to make a name long. A long descriptive name is better 
+than a short enigmatic name.” [2](#cite02)
+
 Human beings identify everything by their names. Naming is the most important aspect of coding. Most important aspect of code documentation is good, simple, understandable names.
 
 So our classes, methods, members, functions, modules, variables, constants, properties names must be named clearly, understandably.
 
-## [N1] Never use abbreviations unless agreed by the entire team and documented in as a list.
+## [N2] Do not use abbreviations unless agreed by the entire team and documented as a list.
 
 _For example:_
 
@@ -24,7 +29,7 @@ The team needs to create and maintain a list of abbreviations which is allowed t
 | Num | Number | - |
 | Url | Uniform Resource Locator | Address, location of assets and services |
 
-## [N2] Never use single letters for indexes or variables. Give meaningful names.
+## [N3] Never use single letters for indexes or variables. Give meaningful names.
 
 _For example:_
 
@@ -32,13 +37,13 @@ _For example:_
 
 `for (let userIndex=0, numberOfUsers = users.length; userIndex < numberOfUsers; userIndex++) {...}` **this is good and clear!**
 
-## [N3] Do not use similar variable names.
+## [N4] Do not use similar variable names.
 
 _For example:_
 
 `user`, `userObject`, `userInformation` it will be hard to understand the differences for other developers as well as yourself.
 
-## [N4] Use English or any other language that you are using to name variables, do not add types, objects type indicators.
+## [N5] Use proper language to name variables, do not add types, objects type indicators.
 
 _For example:_
 
@@ -50,11 +55,11 @@ _For example:_
 
 `userObject`, this should be `user`.
 
-## [N5] Avoid using language related reversed words.
+## [N6] Avoid using language related reversed words.
 
-## [N6] Git branch names must be lower case, words spared by '-' dashes.
+## [N7] Git branch names must be lower case, words spared by '-' dashes.
 
-## [N7] Folders names must be lower case, words separated by '-' dashes.
+## [N8] Folders names must be lower case, words separated by '-' dashes.
 
 ## [N-HTML] HTML
 	- File names must be lower case, words separated by '-' dashes.
@@ -74,3 +79,8 @@ _For example:_
 ## References
 
 1. <a id="cite01"></a>Clean Code by Robert C. Martin, Introduction
+2. <a id="cite02"></a>Clean Code by Robert C. Martin, Naming
+
+---
+
+[Back to Code Review](../code-review.md)
