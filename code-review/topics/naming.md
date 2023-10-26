@@ -11,7 +11,7 @@ Human beings identify everything by their names. Naming is the most important as
 Most important aspect of code documentation is good, simple, understandable names.
 
 So our classes, methods, members, functions, modules, variables, constants, properties names 
-must be named indicate it's purpose clearly.
+must be named indicate its purpose clearly.
 
 ## [N2] Do not use abbreviations unless agreed by the entire team and documented as a list.
 
@@ -76,7 +76,7 @@ _For example:_
 	- File names must be camel case. 
 	- Class file names must start with uppercase.
 	- Method, function, variable names must camel case, first letter must be lower case.
-	- Constants names must be all upper case, words separated by '-' dashes. (except imports)
+	- Constants names must be all upper case, words separated by '_' underscore. (except imports)
 
 ## References
 

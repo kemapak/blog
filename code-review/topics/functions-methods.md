@@ -7,7 +7,7 @@
 “The first rule of functions is that they should be small. The second rule of functions is that 
 they should be smaller than that.” [1](#cite01)
 
-Functions and methods should not exceed 33 lines of code, excluding comments, white spaces. If it 
+Functions and methods should not exceed 44 lines of code, excluding comments, white spaces. If it 
 is large, break it up. [2](#cite02)
 
 If your methods, functions are small and named properly your code is already in good shape.

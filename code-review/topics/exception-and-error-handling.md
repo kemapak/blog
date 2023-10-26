@@ -3,7 +3,7 @@
 “Error handling is important, but if it obscures logic, it’s wrong.” [1](#cite01)
 
 > Low level methods should throw exceptions and high level method who consume them should
-> handle those exceptions. Said that high level methods could also throw exceptions if they 
+> handle (catch) those exceptions. Said that high level methods could also throw exceptions if they 
 > called by other methods as well.
 
 ## [ERR1] Throw exceptions 
@@ -67,7 +67,7 @@ catch (e) {
 
 ## [ERR3] Use good, understandable error messages avoid using error codes.
 
-Your error message should be understandable, and the developer to isolate the issue. Avoid using 
+Your error messages should be understandable, and the developer to isolate the issue. Avoid using 
 generic messages.
 
 `Error 3487dE` is not very helpful, avoid using error codes.
