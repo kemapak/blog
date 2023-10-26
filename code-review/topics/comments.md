@@ -69,7 +69,86 @@ Documentation comments are extremely valuable and necessary for explaining your 
 
 
 ## [CMT1] Don't use comments
+Check your code if the comment is necessary! Are you stating the obvious? Are you repeating what your code say?
 
+```
+  // This is user object.
+  let user = {
+	  firstName: '',
+	  lastName: ''
+  }
+```
+
+Can you rename a variable, method, function? Can you extract a block of code into a function and name it accordingly to avoid using a comment?
+
+```
+function factorial(parameter) {
+
+		// Check if it is whole number, valid number.
+    if ('number' !== typeof parameter) {
+        throw new Error(parameter + ' is not a number.');
+    }
+    
+    if (parameter < 0) {
+        throw new Error(parameter + ' is a negative number.');
+    }
+    
+    if (parameter !== Math.trunc(parameter)) {
+        throw new Error(parameter + ' is a decimal number.');
+    }
+    
+    // Calculate factorial
+    if (0 === parameter) {
+        return 1;
+    }
+    
+    if (1 === parameter) {
+        return 1;
+    }
+    
+    if (parameter > 1) {
+        return parameter * factorial(parameter - 1);
+    }
+}
+```
+
+Should be written as below. The whole number check is extracted into its own method.
+
+```
+function factorial(parameter) {
+	if (false === isWholeNumber(parameter)) {
+		throw new Error(parameter + ' is not a whole number.');
+	}
+
+	if (0 === parameter || 1 === parameter) {
+		return 1;
+	}
+
+	if (parameter > 1) {
+		return parameter * factorial(parameter - 1);
+	}
+}
+```
+
+Is your code too long you use comments to indicate start end finish? Divide into modules, functions. In the case below create a web component that encapsulates the left navigation.
+
+```
+<!-- Start of left navigation -->
+<nav>
+	...
+</nav>
+<!-- End of left navigation -->
+
+```
+
+Are you afraid that you need to revert some complex code so you commented it out and live it in? Do you possibly need bring it back and old code if the requirements changes so you commented the code and checked in? This completely unnecessary unless you are currently working on it. When you check in your code it must be in pristine condition and you can always revert back using SCM. That is the reason we use SCMs (source control management) software like git! Below code is not OK!
+
+```
+ // Change for user story 12345
+ // function someVeryComplexWeirdCrazyCode() {
+ //  ...
+ //}
+```
 
 ## References
 1. <a id="cite01"></a>Clean Code by Robert C. Martin, Functions, Comments

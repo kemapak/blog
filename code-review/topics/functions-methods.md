@@ -115,9 +115,6 @@ function factorial(parameter) {
     if (parameter !== Math.trunc(parameter)) {
         throw new Error(parameter + ' is a decimal number.');
     }
-    if (false === isWholeNumber(parameter)) {
-        throw new Error(parameter + ' is not a whole number.');
-    }
     
     if (0 === parameter) {
         return 1;
@@ -133,7 +130,7 @@ function factorial(parameter) {
 }
 ```
 
-into this
+into this below. The whole number check is extracted into its own method.
 
 ```
 function factorial(parameter) {
