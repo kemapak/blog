@@ -30,7 +30,7 @@ TODO
 - Unit of code. Small is always better
 - Cyclomatic complexity. Simple is always better
 - Unit Tests. Test first, code later (TDD, test driven development)
-- Comments. What to say and when to say it? Is silence golden?
+- [Comments](./topics/comments.md). What to say and when to say it? Is silence golden?
 - `Readme.md` What and how to document!
 - [Function, Methods](./topics/functions-methods.md). Are you cohesive enough.
 - Dependency handling. Let's decouple!
