@@ -98,7 +98,7 @@ if((true === employee.fullTime) && (67 < employee.age)) then {
 } 
 ```
 
-Should be written as below. The whole number check is extracted into its own method.
+Should be written as below. The employee eligibility for full benefits check is extracted into its own method.
 
 _Good names and methods instead of comments._
 
