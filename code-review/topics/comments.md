@@ -32,7 +32,7 @@ code
 ```
 
 ## Block comments
-These comments are used if there a complex logic, exceptions. If you need more space than a line comment to explain your intend, you need to use block level comments.
+These comments are used if there is a complex logic, exceptions. If you need more space than a line comment to explain your intent, you need to use block level comments.
 
 _For example:_
 ### JavaScript or TypeScript
@@ -73,11 +73,11 @@ Please check [JS Doc Reference](https://www.typescriptlang.org/docs/handbook/jsd
 
 ## [CMT1] Don't use comments
 
-> "The proper use of comments is to compensate for our failure to express ourself in code." — Robert C. Martin  [1](#cite01)
+> "The proper use of comments is to compensate for our failure to express ourselves in code." — Robert C. Martin  [1](#cite01)
 
 - Check your code if the comment is necessary! Are you stating the obvious? Are you repeating what your code says?
 
-_Antipattern_
+_Anti-pattern_
 
 ```
   // This is user object.
@@ -89,7 +89,7 @@ _Antipattern_
 
 - Can you rename a variable, method, function? Can you extract a block of code into a function and name it accordingly to avoid using a comment?
 
-_Antipattern_
+_Anti-pattern_
 
 ```
 // Check if employee is eligible for full benefits.
@@ -110,7 +110,7 @@ if (employee.isEligableForFullBenefits()) {
 
 - Is your code too long you use comments as markers to indicate start end finish? Divide your code into modules, functions. In the case below we create a web component that encapsulates the left navigation to simplify our code without need of using comments.
 
-_Antipattern_
+_Anti-pattern_
 
 ```
 <!-- Start of left navigation -->
@@ -130,9 +130,9 @@ _Modularized HTML instead of comments._
 	<left-nav></left-nav>
 ```
 
-- Are you afraid that you need to revert some complex code so you commented it out and live it in? Do you possibly need bring it back and old code if the requirements changes so you commented the code and checked in? This completely unnecessary unless you are currently working on it. When you check in your code it must be in pristine condition and you can always revert back using SCM (source control management). That is the reason we use SCMs, awesome applications like git! Below code is not OK!
+- Are you afraid that you need to revert some complex code; therefore, you commented it out and live it in? Do you possibly need bring it back and old code if the requirements changes; therefore, you commented the code and checked in? This completely unnecessary unless you are currently working on it. When you check in your code it must be in pristine condition, and you can always revert back using SCM (source control management). That is the reason we use SCMs, awesome applications like git! Below code is not OK!
 
-_Antipattern_
+_Anti-pattern_
 
 ```
  // Change for user story 12345
@@ -157,7 +157,7 @@ The above statement is absolutely true but in certain cases our code needs addit
 
 - Using documentation comments like JSDocs or JavaDocs for our methods, functions, classes are required. This is necessary to help our fellow engineers who will use our code. [2](#cite02)
 
-- Finally, if you need and only must to write a comment it must be clearly explain the indent!
+- Finally, if you need and only must write a comment, it must be clearly explain the indent!
 
 ## References
 1. <a id="cite01"></a>Clean Code by Robert C. Martin, Comments
