@@ -43,7 +43,7 @@ TODO
 - Inheritance. Not all inheritance make you rich!
 - Design Patterns. Software is life!
 - Data, Model. Garbage in garbage out!
-- Code Structure. What is where?
+- [Code Structure and Fomratting](./topics/structure-and-formatting.md). What is where?
 - Small changes. Can you release it now?
 
 ## References
