@@ -67,7 +67,9 @@ code
 
 ## Documentation comments
 
-Documentation comments are extremely valuable and necessary for explaining your methods, classes to other developers and are used to generate your systems technical documentation, interface. JSDocs, JavaDocs are good examples of these.
+Documentation comments are extremely valuable and necessary for explaining your methods, classes to other developers 
+and are used to generate your systems technical documentation, interface. JSDocs, JavaDocs are good examples of these 
+types of comments.
 
 Please check [JS Doc Reference](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html) for more information.
 
@@ -157,7 +159,7 @@ The above statement is absolutely true but in certain cases our code needs addit
 
 - Using documentation comments like JSDocs or JavaDocs for our methods, functions, classes are required. This is necessary to help our fellow engineers who will use our code. [2](#cite02)
 
-- Finally, if you need and only must write a comment, it must be clearly explain the indent!
+- Finally, if you need and only must write a comment, it must be clearly explain the intent!
 
 ## References
 1. <a id="cite01"></a>Clean Code by Robert C. Martin, Comments

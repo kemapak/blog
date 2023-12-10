@@ -50,19 +50,23 @@ function(name, lastName, street, city, zip, phone, email) {
 
 into
 
-```
-function( {name: 'John', 
-           lastName: 'Doe', 
-           street: 'Abc Drive', 
-           city: 'San Diego', 
-           zip: 12345, 
-           phone: '(111) 222-3333', 
-           email: 'john.doe@example.com'}) {
+```javascript
+function person( 
+    {
+        name: 'John', 
+        lastName: 'Doe', 
+        street: 'Abc Drive', 
+        city: 'San Diego', 
+        zip: 12345, 
+        phone: '(111) 222-3333', 
+        email: 'john.doe@example.com'
+    }) {
 }
 ```
 
-
 ## [FM5] Order of the methods and functions should be top down.
+
+Your order should be from general to specific. In other words, summary to details.
 
 _For example:_
 

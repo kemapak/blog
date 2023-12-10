@@ -15,7 +15,7 @@ throws exceptions. Have a main method who call these functions with try catch bl
 
 _For example:_
 
-```
+```javascript
 class Insurance {
  processClaim(claimId, customerId) {
     try {
@@ -31,7 +31,7 @@ class Insurance {
  
  /**
   *
-  * @throws Claim does not exists exception
+  * @throws Claim does not exists exception.
   */
  getClaim(claimId) {
     ...
@@ -40,7 +40,7 @@ class Insurance {
  
  /**
   *
-  * @throws User not found exception
+  * @throws User not found exception.
   */
  getUser(customerId) {
     ...
@@ -56,21 +56,23 @@ Your intent will be clear as well as your code.
 
 _For example:_
 
-```
+```javascript
 try {
     deleteUserReferences(userId);
 }
 catch (e) {
-    ....
+    ...
 }
 ```
 
 ## [ERR3] Use good, understandable error messages avoid using error codes.
 
-Your error messages should be understandable, and the developer to isolate the issue. Avoid using 
-generic messages.
+Your error messages should be understandable, and help the developer to isolate the issue. Avoid using 
+generic and cryptic messages.
 
 `Error 3487dE` is not very helpful, avoid using error codes.
+
+`There is a problem, contact system admin.` is not helpful either, actually it makes it worse.
 
 ## References
 1. <a id="cite01"></a>Clean Code by Robert C. Martin, Functions, Error Handling
