@@ -25,6 +25,7 @@
 
 ### References
 - [MDN Web Docs](https://developer.mozilla.org/en-US/)  (This is the most important reference any Frontend Engineer will use)*
+- [MDN Getting started with the web](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web) * Great resource to get started to web development.
 - [Javascript Fundamentals](https://github.com/kemapak/javascript-fundamentals) Notes and code samples for the JavaScript fundamentals training. *
 - [What the heck is the event loop anyway?](https://www.youtube.com/watch?v=8aGhZQkoFbQ) | Philip Roberts | JSConf EU
 - [CodeWars](https://www.codewars.com) for improving your JavaScript skills, a lot of puzzles, exercise. I highly recommend.
@@ -55,7 +56,7 @@
 
 ## Angular
 
-###B ooks
+### Books
 - Angular: Up and Running (Shyam Seshadri) *
 
 ### References
