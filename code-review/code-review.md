@@ -31,6 +31,7 @@ TODO
 - [Exception and Error handling](./topics/exception-and-error-handling.md). How to handle punches!
 - [Comments](./topics/comments.md). What to say and when to say it? Is silence golden?
 - [Code Structure and Formatting](./topics/structure-and-formatting.md). What is where?
+- [Data Structures vs Objects](./topics/data-structures-vs-objects.md) Does your data behaves well?
 - Unit of code. Small is always better
 - Cyclomatic complexity. Simple is always better
 - Unit Tests. Test first, code later (TDD, test driven development)
@@ -43,7 +44,6 @@ TODO
 - Public, Private or Static. Now you see me or may be not!
 - Inheritance. Not all inheritance make you rich!
 - Design Patterns. Software is life!
-- Data, Model. Garbage in garbage out!
 - Small changes. Can you release it now?
 
 ## References
