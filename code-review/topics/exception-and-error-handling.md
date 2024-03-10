@@ -6,12 +6,16 @@
 > handle (catch) those exceptions. Said that high level methods could also throw exceptions if they 
 > called by other methods as well.
 
-## [ERR1] Throw exceptions 
+## [ERR1] Catch must leave the program in good state, whatever happens in try.
+
+## [ERR2] Throw exceptions 
 Do not clutter your code with a giant try catch. If this is case most probably your function or 
 method is not cohesive. Break them up into small functions, methods and make sure these methods
 throws exceptions. Have a main method who call these functions with try catch block.
 
 > Remember generally low level methods throws exceptions and high level methods handles them.
+
+"Each exception that you throw should provide enough context to determine the source and location of an error." [1](#cite01)
 
 _For example:_
 
@@ -50,7 +54,7 @@ class Insurance {
 }
 ```
 
-## [ERR2] Extract try and catch blocks out into functions of their own.
+## [ERR3] Extract try and catch blocks out into functions of their own.
 
 Your intent will be clear as well as your code.
 
@@ -65,7 +69,12 @@ catch (e) {
 }
 ```
 
-## [ERR3] Use good, understandable error messages avoid using error codes.
+## [ERR4] Use good, understandable error messages avoid using error codes.
+
+"Create informative error messages and pass them along with your exceptions. 
+Mention the operation that failed and the type of failure. 
+If you are logging in your application, pass along enough information to be able 
+to log the error in your catch." [1](#cite01)
 
 Your error messages should be understandable, and help the developer to isolate the issue. Avoid using 
 generic and cryptic messages.
