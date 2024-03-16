@@ -33,6 +33,9 @@ The team needs to create and maintain a list of abbreviations which is allowed t
 
 ## [N3] Never use single letters for indexes or variables. Give meaningful names.
 
+Avoid mental mapping, i, j, k or any other letter has no meeting. Generic names are confusing and the developer has to 
+figure it out. You will slow down and even worse, misguide your fellow engineers.
+
 _For example:_
 
 `for (let i=0; i < collection; i++) {...}` **this is really bad! What is index, what is collection?**
