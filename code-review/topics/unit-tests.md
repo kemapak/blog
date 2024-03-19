@@ -15,6 +15,8 @@ If you do not write your test properly, maintaining them could become a huge tas
 > Unit tests are not written to catch bugs but prevent them. It is very different from end to end, 
 > functional tests which are written to catch bugs.
 
+> Unit Test Flow: **Setup -> Execution -> Verification -> Teardown**
+
 ## What is TDD?
 If you are going to write unit tests, it is a must be written first, before you write your code. I will be very honest here.
 You cannot write good code or testable code if you do not write your unit tests first! 
@@ -33,34 +35,36 @@ Personally it teaches how to code, when to refactor, how to refactor.
 To learn more about TDD read the book [Test Driven Development by Example](https://www.informit.com/store/test-driven-development-by-example-9780321146533) by Kent Beck, 
 or go over the hand on exercises created by me [Learning TDD by factorial example](https://github.com/kemapak/factorial-tdd).
 
-## [S11] Section One
+## Testing design patterns.
+If you do not refactor and keep your test code in good condition your production code will same the same fate.
+The best way to learn xUnit patterns is to read the awesome book by Gerard Meszaros [XUnit Test Patterns](http://xunitpatterns.com)
+and check my blog [Unit test desing patterns](https://github.com/kemapak/blog/blob/master/testing/Testing%20Design%20Patterns%20for%20UI.md) 
+for a summarized version.
 
-“Reference.” - Author Name Lastname [1](#cite01)
+## [UT1] Single concept per test
+Each test should test one simple concept. They should not be dozens of asserts, there should not be conditionals, there 
+should not be try catch blocks. If you see a need for this split the tests.
 
-Text
+"So it’s not the multiple asserts in each section of Listing 9-8 that causes the problem. Rather it is the fact that 
+there is more than one concept being tested. So probably the best rule is that you should minimize the number of 
+asserts per concept and test just one concept per test function." - Robert Martin [1](#cite01)
 
-_For example:_
+## [S2] Test must be independent and repeatable.
 
-```javascript
-Code
-```
+A test should be able to run without any dependency to another test, and always produce the same result, regardless how 
+many times you run it.
 
-## [S2] Section Two
-
-“Reference.” - Author Name Lastname [1](#cite01)
-
-Text
-
-_For example:_
-
-```javascript
-Code
-```
+## [S3] Write your tests in BDD format.
+Write your tests in **Given**, **When**, **Then** format to be more readable and understandable. Remember unit test are the contract
+and documentation of your system.
 
 ## References
 
 1. <a id="cite01"></a>Clean code, Robert Martin, Unit Tests
 2. <a id="cite02"></a>Building Maintainable Software, Joost Visser, Write Short Units of Code
+3. xUnit Patterns, Gerard Meszaros
+4. Learning TDD with Factorial, Kem Apak
+5. xUnit Design Patterns, Kem Apak
 
 ---
 
