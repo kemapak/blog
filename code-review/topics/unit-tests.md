@@ -2,7 +2,7 @@
 
 "Having dirty tests is equivalent to, if not worse than, having no tests." - Robert Martin [1](#cite01)
 
-Actually in my opinion it is better to have no tests then bad tests. What a way to start promoting tests by saying
+Actually in my opinion it is better to have no tests thn bad tests. What a way to start promoting tests by saying
 do not write tests if you are not going to really do it properly. May be shocking but this is the truth.
 
 Wrong tests will give you false confidence or false concern. You will never know if your code is running as expected or 
@@ -10,10 +10,20 @@ not.
 
 > Test code is real code, it must be clean and simple!
 
-If you do not write your test properly, maintaining them could become a huge task by itself.
+If you do not write your test properly, maintaining them could become a huge task by itself. The test code should be 
+threaded same as production code. If you do not maintain your tests like your production code. It will become rotten. 
+Instead, unit tests helping to maintain your production, they will be hassle, pain to maintain. Eventually you will stop 
+running them, and even remove them completely, as a result your production code will decay and will be impossible to 
+maintain.
+
+"It is unit tests that keep our code flexible, maintainable, and reusable. The reason is simple. If you have tests, 
+you do not fear making changes to the code! Without tests every change is a possible bug." - Robert Martin [1](#cite01)
 
 > Unit tests are not written to catch bugs but prevent them. It is very different from end to end, 
 > functional tests which are written to catch bugs.
+
+## What is makes a test good test?
+A
 
 > Unit Test Flow: **Setup -> Execution -> Verification -> Teardown**
 
