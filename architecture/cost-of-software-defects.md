@@ -29,22 +29,21 @@ Also lost of opportunity the time wasted to fix the defects. Lost of customers c
 they are facts.
 
 According to Nasa it costs 10-11 times more to fix a defect in production compare to development.
-(Error Cost Escalation Through the Project Life Cycle)[https://ntrs.nasa.gov/api/citations/20100036670/downloads/20100036670.pdf]
+[Error Cost Escalation Through the Project Life Cycle](https://ntrs.nasa.gov/api/citations/20100036670/downloads/20100036670.pdf)
 
-According to (Forbes/CISQ)[https://www.forbes.com/sites/forbestechcouncil/2023/12/26/costly-code-the-price-of-software-errors/?sh=43805ea43242]
+According to [Forbes/CISQ](https://www.forbes.com/sites/forbestechcouncil/2023/12/26/costly-code-the-price-of-software-errors/?sh=43805ea43242)
 software defects cost $2.08 trillion dollar to US economy.
 
 ## How to calculate cost of fixing bugs?
 
-Every company is different, depending on, how agile, how lean, how their test automation, CI/CD and code quality is they will 
-spend less or more to fix bugs. According to Adam Tornhill, CTO of CodeScene it is twice as fast and easier to fix defects
-in code bases that are healthy.
+Every company is different. Depending on, how agile, how lean, what percent of their tests are automated, how effective their CI/CD,
+how good is their code quality. This will determine what an organization will spend, less or more time and effort to fix bugs. 
+According to Adam Tornhill, CTO of CodeScene it is twice as fast and easier to fix defects in code bases that are healthy.
 
-Basic calculation, ignoring the customer impact, and lost of opportunity to use the developer to write functional software improve 
-the product. It is for each defect, how many people worked (QA, engineer, customer service, product, management, dev ops, etc), how many hours
-times the cost of their hourly rate to the company.
+Basic calculation, ignoring the customer impact, and lost of opportunity of using the developers to write functional software 
+that improves the product and cost of using resources. For each defect, how many people worked, how many hours and their hourly cost. (QA, engineer, customer service, product, management, dev ops, etc)
 
-Cost of fixing a defect = (personA hours spend * hourly cost A) + (personB hours spend * hourly cost B) + .....
+`Cost of fixing a defect = (personA hours spend * hourly cost A) + (personB hours spend * hourly cost B) + .....`
 
 If you are working in an archaic technology company the cost will be even, way more. For example if you do not have unit tests, 
 automated e2e tests, functional tests, you might introduce new bugs fixing the current one.
