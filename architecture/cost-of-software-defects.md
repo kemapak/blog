@@ -1,4 +1,4 @@
-# Software Quality Cost
+# Cost of Software Defects
 
 ## What is quality software?
 - From the business and customer perspective a system that runs, executes as expected. Enables the user to
