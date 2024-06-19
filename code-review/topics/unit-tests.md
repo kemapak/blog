@@ -46,7 +46,8 @@ asserts per concept and test just one concept per test function." - Robert Marti
 
 ## [UT4] Write your tests in GWT (BDD) format.
 Write your tests in **Given**, **When**, **Then** format to be more readable and understandable. Remember unit test are 
-the contract and documentation of your system. This format does not only apply to acceptance test only but to any type.
+the contract and documentation of your system. This format does not only apply to acceptance test but to any type of 
+tests.
 
 ## What is TDD?
 "Drive development with automated tests, a style of development called Test-Driven Development (TDD)." - Kent Beck [2](cite#2)
