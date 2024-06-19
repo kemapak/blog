@@ -34,7 +34,7 @@ TODO
 - [Data Structures vs Objects](./topics/data-structures-vs-objects.md) Does your data behaves well?
 - Unit of code. Small is always better
 - Cyclomatic complexity. Simple is always better
-- Unit Tests. Test first, code later (TDD, test driven development)
+- [Unit Tests](./topics/unit-tests.md) Test first, code later. Does your tests behave well?
 - `Readme.md` What and how to document!
 - Dependency handling. Let's decouple!
 - Defensive coding. Let's do some aikido!
