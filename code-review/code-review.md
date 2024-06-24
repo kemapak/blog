@@ -36,13 +36,10 @@ TODO
 - Cyclomatic complexity. Simple is always better
 - [Unit Tests](./topics/unit-tests.md) Test first, code later. Does your tests behave well?
 - `Readme.md` What and how to document!
-- Dependency handling. Let's decouple!
 - Defensive coding. Let's do some aikido!
-- Classes. Who are you, what can you do? 
-- Interfaces. Let's add some behavior to make you a superman!
+- [Classes](./topics/classes.md). Who are you, what can you do?
 - Constants, variables and class properties. What are you, who are you?
 - Public, Private or Static. Now you see me or may be not!
-- Inheritance. Not all inheritance make you rich!
 - Design Patterns. Software is life!
 - Small changes. Can you release it now?
 

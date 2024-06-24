@@ -25,48 +25,34 @@ the other hand, can have way more methods and fields as long as they are static.
 If an instance class has too many methods and too many fields, it is most likely to have multiple responsibilities. It 
 must be refactored and divided into smaller classes.
 
-A class should have one responsibility (**Single Responsibility Principle**). This rule should never be violated!
+A class should have one responsibility. This rule should never be violated! It is called **Single Responsibility 
+Principle, SRP**
 
 ## [C3] Classes must be cohesive.
 
-“Reference.” - Author Name Lastname [1](#cite01)
+Make sure your instance fields and methods bind together as a whole logically. Follow the single responsibility 
+principle. Cohesive classes are usually small classes. When a class loses cohesion, split it.
 
-Text
+Do not modify your classes to add functionality but extend them with subclasses. This is called **Open Close Principle, 
+OCP**. A class is open for extension, but is closed for modification.
 
-_For example:_
+## [C3] Classes must be independent (loosely coupled)
 
-```javascript
-Code
-```
-
-## [S2] Classes must be independent (loosely coupled)
-
-“Reference.” - Author Name Lastname [1](#cite01)
-
-Text
-
-_For example:_
-
-```javascript
-Code
-```
+Freedom, independence is good for human beings as well as classes. Try to decouple your classes from other classes, modules, 
+packages as much as possible. This makes it easy to test, easy to modify without impacting other parts of your software. 
+If you need to add a dependency, which happens quite often, pass other classes (instantiated) and methods as a parameter. 
+This is called ** Dependency Injection, DI **. Also, you can use interfaces, abstract classes, decorator pattern, template 
+method pattern to manage the dependencies, this is called **Dependency Inversion Principle, DIP**. Move the implementation
+details to the sub, concrete classes. Our classes should depend on abstractions not concrete details.
 
 ## [S2] Keep inheritance to a minimum use interfaces instead
 
-“Reference.” - Author Name Lastname [1](#cite01)
-
-Text
-
-_For example:_
-
-```javascript
-Code
-```
+Even one of the core mechanism of OO is inheritance, try to keep your system flat as much as possible. Do not inherit 
+more than 3 levels. Instead, use interfaces and decorator pattern as much as possible.
 
 ## References
 
 1. <a id="cite01"></a>Clean Code, Robert Martin, Classes
-2. <a id="cite02"></a>Book Name, Author Name Last Name, Chapter
 
 ---
 
