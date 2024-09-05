@@ -94,26 +94,39 @@ in one peace. _For example:_ We can build a calendar micro frontend that any web
 markup and necessary libraries. Another example could be a chat client that we can add to any web application. 
 
 ## Parts of a web component
+
 ### 1 Custom elements
-Browser JavaScript API, that enables to define custom elements. Let the browser know how the element will behave.
+
+Browser native JavaScript API, that defines custom elements. Let the browser know how the element will behave, render.
+
 ### 2 Shadow DOM
-An encapsulated DOM, separate from the page DOM that will enable you to keep your HTML, CSS and JavaScript within your component private and avoid collisions with the page.
+
+An encapsulated DOM, separate from the page DOM that will enable you to keep your HTML, CSS and JavaScript within your 
+component private and avoid collisions with the page. In other words, you can use different frameworks, CSS libraries, they
+will not collide and override each other.
+
 > This is similar to an iFrame from encapsulation perspective.
 
 ### 3 Templates and Slots
-Templates enable you to create your custom private HTML and will define the structure of your custom component.
 
-Slots are placeholder for child content belongs to the main page. _For example_: In a dialog component, you can put any HTML inside its body/content or the header or the footer.
+Templates enable you to create your custom private (or public) HTML and will define the structure of your custom component.
+
+Slots are placeholder for child content belongs to the main page. _For example_: In a dialog component, you can put any 
+HTML inside its body/content or the header or the footer. A slot is a bucket of custom element that you can put stuff in.
 
 Slots come in 2 flavors named and generic.
 
-- If you name a slot content will be treated according to the custom code in your component, it can have it own styles. _For example_: for a dialog you might have header, body and footer slots.
-- If you have a generic slot any content you put from the main page will be treated the same. _For example_: for a tooltip component you will just have a generic slot since it can only have one type of content.
-> Important note: When you define a slot in your template, the host page can insert multiple of them. _For example_: multiple  body slots in a dialog component, or multiple generic slots in a tooltip.
+- If you name a slot content will be treated according to the custom code in your component, it can have it own styles. 
+- _For example_: for a dialog you might have header, body and footer slots.
+- If you have a generic slot any content you put from the main page will be treated the same. _For example_: for a 
+- tooltip component you will just have a generic slot since it can only have one type of content.
+> Important note: When you define a slot in your template, the host page can insert multiple of them. _For example_: 
+> multiple body slots in a dialog component, or multiple generic slots in a tooltip.
 
 ## Web component life cycle and events
-As described in the previous section, we have to create a template, add the necessary JavaScript and style to create a web component.
-Below is the basic skeleton, which I will describe each part in detail.
+
+As described in the previous section, we have to create a template, add the necessary JavaScript and style to create a 
+web component. Below is the basic skeleton, which I will describe each part in detail.
 
 ```
 class CustomComponent extends HTMLElement {
@@ -181,7 +194,7 @@ class CustomComponent extends HTMLElement {
 // Adding your component to the custom elements, and defining component.
 customElements.define('custom-component', CustomComponent);
 ```
-> Note: This is how write components, my coding style. You can have the templates outside the class if you want, and prefer.
+> Note: This is how write components, my coding style. You can have the templates outside the class if you want and prefer.
 
 ## References
 - [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)
