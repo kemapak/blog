@@ -134,13 +134,22 @@ class CustomComponent extends HTMLElement {
     #template = document.createElement('template');
     #templateMarkup = `
         <!-- Your custom markup, styles -->
+        
+        <!-- :host is the style of the root element of your web component. -->
         <style>
             :host {
                 display: inline-block;
                 contain: content;
             }
         </style>
-        <!-- :host is the style of the root element of your web component. -->
+        
+        <div>Your own markup</div>
+        
+        <!-- Generic slot. --> 
+        <slot></slot>
+        
+        <!-- Named slot. --> 
+        <slot name="content-header"></slot>
     `;
     
     constructor() {
