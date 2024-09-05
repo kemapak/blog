@@ -7,9 +7,11 @@ complex systems, piece by piece, one at a time.
 
 How about HTML? It is markup language, it has limited number of tags, it does not have any logic, and it is very monolithic.
 
-You can easily see a web based application or page consists of thousands of lines of HTML code. As of this writing;
+You can easily see a web based application or page consists of thousands of lines of HTML code. As of 2023;
 > Amazon landing page consists of more than **19K lines of HTML code**.
+> 
 > CVS Specialty consists of more than **3K lines of HTML code**.
+> 
 > Apple landing page consists of **just over 1K lines of HTML code**.
 
 Large monolithic HTML pages, web based applications are definitely not easy to maintain, to understand, easy to isolate 
@@ -35,9 +37,13 @@ This technology is also capable of extending the functionality of current HTML e
 you can do magic.
 
 ## A bit of history
+
 ### Server side rendering
+
 In old days when we used to render pages using HTML and JSP tags.
+
 ### Client side rendering
+
 When we start use JS frameworks we started to assemble pages in browsers. We did use many frameworks, for example configuration based frameworks like SenihaJS to create pages. These were ugly not easy to maintain each control had huge config files.
 
 Then Angular JS come into our lives in year 2010 created by Misko Hevery from Google, and I was in love!
@@ -72,11 +78,20 @@ It took sometime for all the browser support web components, but now they all do
 - Pleasure to design and develop.
 
 ## Component based web architecture
-Component based web architecture is an approach for building web pages and applications with components. Develop each component independently and reuse them.
+Component based web architecture is an approach for building web pages and applications with components. Develop each 
+component independently and reuse them.
 
 You can make your components accessible, test them in isolation, and fixing issues and updating your code centrally.
 
-This approach also supports custom design systems very well (Given some common CSS for core items). Design also have more freedom and flexibility because they can update the design of a component (and common CSS) that will trickle to the entire application(s). Updating the look and feel, changing design systems will be done easier, cheaper and much faster.
+This approach also supports custom design systems very well (Given some common CSS for core items). Design also have 
+more freedom and flexibility because they can update the design of a component (and common CSS) that will trickle to 
+the entire application(s). Updating the look and feel, changing design systems will be done easier, cheaper and much 
+faster.
+
+## Micro frontend web architecture (MFA)
+This approach even takes component based web architecture a step further, and build mini apps, with all the services, UI 
+in one peace. _For example:_ We can build a calendar micro frontend that any web application can use by just adding the 
+markup and necessary libraries. Another example could be a chat client that we can add to any web application. 
 
 ## Parts of a web component
 ### 1 Custom elements
