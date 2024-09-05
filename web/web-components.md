@@ -1,21 +1,38 @@
 # Web Components
 
-In software engineering we solve big problems by diving them into smaller problems, smaller pieces. Functions, methods, classes and modules are core parts of JavaScript and many other languages. These are structures, paradigms that we use in programming to reduce, isolate the complexity of our code. Modular code is also makes it easy to understand very complex systems, piece by piece.
+In software engineering we solve big problems by diving them into smaller problems, smaller pieces. Functions, methods, 
+classes and modules are core parts of JavaScript and many other languages. These are structures and paradigms that we use 
+in programming to reduce, isolate the complexity of our code. Modular code also makes it easy for us to understand very 
+complex systems, piece by piece, one at a time.
 
-How about HTML? It is markup language, is has limited tags, do not have any logic, and very monolithic.
+How about HTML? It is markup language, it has limited number of tags, it does not have any logic, and it is very monolithic.
 
-You can easily see a web based application or page consists of thousands of lines of HTML code.
+You can easily see a web based application or page consists of thousands of lines of HTML code. As of this writing;
 > Amazon landing page consists of more than **19K lines of HTML code**.
 > CVS Specialty consists of more than **3K lines of HTML code**.
 > Apple landing page consists of **just over 1K lines of HTML code**.
 
-With web components we can drastically reduce the main HTML code, modularize it. Make it way easier to maintain.  
+Large monolithic HTML pages, web based applications are definitely not easy to maintain, to understand, easy to isolate 
+and fix issues. When we add styling, accessibility and functionality on top of it becomes a nightmare. It is just yucky, 
+very yucky!
 
-We do need more HTML tags, custom elements, controls to build our pages, our applications. Even HTML is way better now; and we have quite a few new useful tags like; dialog, calendar (input date), expand/collapse (detail/summary) it is still not enough and never will be. We do need custom tags!
+We do need more HTML tags, custom elements, controls to build our pages, our applications. Even HTML is way better now;
+and we have quite a few new useful tags like; dialog, calendar (input date), expand/collapse (detail/summary) it is still
+not enough and never will be. We do need custom tags!
 
-Large monolithic HTML pages, web based applications are definitely not easy to maintain, to understand, easy to isolate and fix issues. When we add styling, accessibility and functionality on top of it becomes a nightmare. It is just yucky, very yucky!
+With web components we can drastically reduce the main HTML code, modularize it, break into logical pieces. We can write
+functional parts of HTML declaratively. _For example:_ navigation, shopping item, page header, page footer, etc. This   
+makes the HTML code way easier to maintain as well consistent. We use the same page header component throughout our application,
+so it looks the same. When it is time to update the page header we updated in one place and the entire application is updated.
 
-Web components come into play when we really want to organize our HTML, build modular, functional small components, just like lego bricks we can build our applications and web pages in a modular way. Web components are custom HTML elements. This technology is also capable of extending the functionality of current HTML elements. So just with some imagination you can do magic.
+Also from scalability perspective it is very effective. Image we build one card container, one set of form elements (extend native tags)
+and the entire application looks and behaves the same.
+
+
+Web components come into play when we really want to organize our HTML, build modular, functional small components, just 
+like lego bricks we can build our applications and web pages in a modular way. Web components are custom HTML elements. 
+This technology is also capable of extending the functionality of current HTML elements. So just with some imagination 
+you can do magic.
 
 ## A bit of history
 ### Server side rendering
