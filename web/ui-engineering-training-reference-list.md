@@ -1,5 +1,5 @@
 # Book and Training Recommendations, Information for Frontend Engineers
-> * indicates must reads.
+> \* indicates must reads.
 
 ## Table of Contents
 - [General](#general)
