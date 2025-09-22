@@ -121,9 +121,9 @@ List of feature flags,  their purpose, links and life spans.
 _Important note:_ Make sure you follow your companies feature flag naming conventions, development, and maintenance 
 practices. 
 
-| Name              | Purpose                                  | LifeSpan   | Link                | Comments      |
-|:------------------|:-----------------------------------------|:-----------|:--------------------|:--------------|
-| ffForYourEyesOnly | Show new feature to potential customers. | 01/01/2025 | [featureFlag]('#')  | Some details. | 
+| Name                 | Purpose                                  | LifeSpan   | Link                | Comments      |
+|:---------------------|:-----------------------------------------|:-----------|:--------------------|:--------------|
+| ffShowSpecialFeature | Show new feature to potential customers. | 01/01/2025 | [featureFlag]('#')  | Some details. | 
 
 ## Knowledge transfer
 If you are inheriting an application this could be links to other documentation, or your notes, video/audio recordings, 
