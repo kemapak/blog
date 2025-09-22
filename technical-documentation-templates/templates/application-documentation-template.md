@@ -8,7 +8,22 @@ Description of the feature, links to product documentation (Should be under the 
 | Awesome feature | [F123456]('#') | This have all the user stories, tickets for this feature |
 
 ## Table of Contents
-{{TOC}}
+- [Team](#team)
+- [Description](#description)
+- [Application Links](#application-links)
+- [Test credentials](#test-credentials)
+- [Design links](#design-links)
+- [Repo links](#repo-links)
+- [CI/CD pipeline links](#cicd-pipeline-links)
+- [Application local setup](#application-local-setup)
+- [Technical design](#technical-design)
+- [Middle tier](#middle-tier)
+- [APIs](#apis)
+- [Backend Services](#backend-services)
+- [Accessibility (A11y)](#accessibility-a11y)
+- [Cookies, session and local storage](#cookies-session-and-local-storage)
+- [Feature flags](#feature-flags)
+- [Knowledge transfer](#knowledge-transfer)
 
 ## Team
 | Members             | Name(s)    | Comment                                                  |
@@ -24,6 +39,8 @@ Description of the feature, links to product documentation (Should be under the 
 ## Description
 What does the application do, what is the specific functionality. This could be a child to the main application. 
 A micro frontend, a smart component.
+
+### test
 
 ## Application Links
 - QA [full url]('#')
