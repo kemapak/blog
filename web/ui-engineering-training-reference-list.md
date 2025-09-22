@@ -1,4 +1,32 @@
 # Book and Training Recommendations, Information for Frontend Engineers
+> * indicates must reads.
+
+## Table of Contents
+- [General](#general)
+  - [Books](#books)
+  - [References](#references)
+- [JavaScript, HTML and CSS](#javascript-html-and-css)
+  - [Books](#books-1)
+  - [References](#references-1)
+- [Web Components](#web-components)
+  - [Books](#books-2)
+- [Micro Frontends](#micro-frontends)
+  - [Books](#books-3)
+- [UX](#ux)
+  - [Books](#books-4)
+- [Angular](#angular)
+  - [Books](#books-5)
+  - [References](#references-3)
+- [React](#react)
+  - [Books](#books-6)
+- [Node](#node)
+  - [Books](#books-7)
+  - [References](#references-4)
+- [Accessibility (a11y)](#accessibility-a11y)
+  - [Books](#books-8)
+- [Design Systems](#design-systems)
+  - [Books](#books-9)
+- [General References and Specs](#general-references-and-specs)
 
 ## General
 
@@ -79,6 +107,16 @@
 ### References
 - [Node.js](https://nodejs.org/en)
 - [Certification](https://openjsf.org/certification)
+
+## Accessibility (a11y)
+
+### Books
+- Web Accessibility Cookbook, Manuel Matuzovic *
+
+## Design Systems
+
+### Books
+- Atomic Design, Brad Frost 
 
 ## General References and Specs
 - [MDN Web Docs](https://developer.mozilla.org/en-US/) *
