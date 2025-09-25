@@ -1,4 +1,5 @@
 # Application documentation template
+(Replace the title with yours)
 
 ## Feature 
 Description of the feature, links to product documentation (Should be under the same documentation directory).

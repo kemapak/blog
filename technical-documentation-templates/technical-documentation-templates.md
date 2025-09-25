@@ -7,7 +7,7 @@ customize (and should) for your specific needs to your company's standards.
 - [Application documentation template](./templates/application-documentation-template.md) This is per application or a new functionality within an application. Usually 
 suited for engineering leads.
 
-- [Architectural investigation template]() This is for web architects to document their technical investigations, 
+- [Architectural investigation template](./templates/architectural-investigation-template.md) This is for web architects to document their technical investigations, 
 spikes and prototypes.
 
 - [Architectural solution template]() This is for web architects to document their solutions, proposals related to a 
