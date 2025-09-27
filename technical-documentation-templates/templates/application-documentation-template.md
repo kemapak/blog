@@ -46,11 +46,11 @@ Description of the feature, links to product documentation (Should be under the 
 | Architecture        | John Xyz     |
 
 ## Description
-What does the application do, what is the specific functionality. This could be a child to the main application.
-A micro frontend, a smart component.
+What does the application do, what is the specific functionality, describe it here. This could be a child to the main 
+application, a micro frontend or a smart component.
 
 ## Testing
-Document all the automated (and God forbig manual) tests. Unit, e2e, performance, a11y, secuirty, integration.
+Document all the automated (and God forbid manual) tests. Unit, e2e, performance, a11y, security, integration.
 
 ## Application Links
 - QA [full url]('#')
@@ -134,9 +134,9 @@ List of feature flags,  their purpose, links and life spans.
 _Important note:_ Make sure you follow your companies feature flag naming conventions, development, and maintenance 
 practices. 
 
-| Name                 | Purpose                                  | LifeSpan   | Link                | Comments      |
-|:---------------------|:-----------------------------------------|:-----------|:--------------------|:--------------|
-| ffShowSpecialFeature | Show new feature to potential customers. | 01/01/2025 | [featureFlag]('#')  | Some details. | 
+| Name                 | Purpose                                  | LifeSpan   | Link               | Comments      |
+|:---------------------|:-----------------------------------------|:-----------|:-------------------|:--------------|
+| ffShowSpecialFeature | Show new feature to potential customers. | 01/01/2025 | [featureFlag]('#') | Some details. | 
 
 ## Knowledge transfer
 If you are inheriting an application this could be links to other documentation, or your notes, video/audio recordings, 
@@ -150,10 +150,10 @@ the same document directory, and format it if necessary.
 
 ## Related content
 Add the links to the related documents. Coding standards, NFR requirements, etc.
-- (Coding standards)[#]
-- (Ally standards)[#]
-- (Frameworks, libraries used)[#]
-- (Other related content)[#]
+- [Coding standards](#)
+- [Ally standards](#)
+- [Frameworks, libraries used](#)
+- [Other related content](#)
 
 ---
 Return to [Technical documentation templates](../technical-documentation-templates.md)

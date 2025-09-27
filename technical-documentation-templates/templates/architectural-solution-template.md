@@ -41,7 +41,7 @@ Include a brief statement of the problem we are trying to solve.
 ## UX Journey
 This could be Figma or any other URL that point to low and/or high fidelity designs. _For example:_
 
-- [Solution link]('#')
+- [Design link]('#')
 
 ## Scope
 Define the work needed to deliver the product, including its goals, features, constraints, deliverables, and the tasks 
@@ -69,7 +69,7 @@ Before adding content here, consider whether the content belongs elsewhere.
 
 ## Service Blueprint(s)
 Include an inline screenshot of the service blueprint, along with an embedded copy of a document or visual technical 
-design(s) (Sequence diagrams, etc)
+design(s) (Sequence diagrams, etc.)
 
 ## API(s)
 Include details of API contract, with descriptions as needed. Add payloads.
@@ -81,8 +81,8 @@ Include details of API contract, with descriptions as needed. Add payloads.
 
 ## Related content
 Add the links to the related documents. Institutions  architectural philosophy, NFR requirements, etc.
-- (Related content one)[#]
-- (Related content two)[#]
+- [Related content one](#)
+- [Related content two](#)
 
 ---
 Return to [Technical documentation templates](../technical-documentation-templates.md)
