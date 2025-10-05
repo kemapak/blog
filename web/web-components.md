@@ -23,7 +23,7 @@ and we have quite a few new useful tags like; dialog, calendar (input date), exp
 not enough and never will be. We do need custom tags!
 
 With web components we can drastically reduce the main HTML code, modularize it, break into logical pieces. We can write
-functional parts of HTML declaratively. _For example:_ navigation, shopping item, page header, page footer, etc. This   
+functional parts of HTML declaratively. _For example:_ navigation, shopping item, page header, page footer, etc. This 
 makes the HTML code way easier to maintain as well consistent. We use the same page header component throughout our application,
 so it looks the same. When it is time to update the page header we updated in one place and the entire application is updated.
 
@@ -44,7 +44,7 @@ In old days when we used to render pages using HTML and JSP tags.
 
 ### Client side rendering
 
-When we start use JS frameworks we started to assemble pages in browsers. We did use many frameworks, for example configuration based frameworks like SenihaJS to create pages. These were ugly not easy to maintain each control had huge config files.
+When we start use JS frameworks we started to assemble pages in browsers. We did use many frameworks, for example configuration based frameworks like SenchaJS to create pages. These were ugly not easy to maintain each control had huge config files.
 
 Then Angular JS come into our lives in year 2010 created by Misko Hevery from Google, and I was in love!
 
