@@ -1,21 +1,20 @@
 # AXE
 
-AXE is a great browser plugin to find most of your coding and color contrast a11y issues. It is easy to 
-setup and easy to use. Also helps you and give you tips how to solve your a11y defects. 
+AXE DevTools is an excellent browser extension for identifying accessibility (a11y) issues, including coding errors and 
+color contrast problems. It’s simple to set up, easy to use, and provides helpful guidance on how to fix the issues it 
+detects. 
 
-## Chrome setup
-1. Get the Chrome browser extension at [Chrome web store](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US)
-2. Install the plugin
-3. Verify the extension is enabled at (chrome://extensions/)[chrome://extensions/]
-4. Open dev tools and select AXE from the top menu verify you see the AXE.
-   - AXE does not always showup on some pages, go to a different site and check if you can see it.
-   - Close and reopen Chrome.
-5. Select your role and accept the terms and conditions.
+## Chrome Setup
+1. Install the [AXE DevTools Web Accessibility Extension](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US) from the Chrome Web Store.
+2. Once installed, verify that the extension is **enabled** in [chrome://extensions/](chrome://extensions/)
+3. Open Chrome DevTools and look for the **AXE** tab in the top menu.
+   - If AXE doesn’t appear, try visiting a different site or restarting Chrome.
+4. When prompted, select your role and accept the terms and conditions.
 
-## Accessing AXE
-1. Open dev tools in Chrome (Opt + CMD + i)
-2. Select AXE tools from the top menu.
-3. Click **Full Page Scan**
-> Notes from [AXE](https://axe.deque.com/install-success)
+## Using AXE
+1. Open Chrome DevTools (**Option** + **Command** + **i** on macOS).
+2. Select **AXETools** tab.
+3. Click **Full Page Scan** to analyze the page for accessibility issues.
+> For additional details, see the official [AXE documentation](https://axe.deque.com/install-success)
 
 ![Example page show AXE tool](./assets/axe-example.png)
