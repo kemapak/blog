@@ -16,3 +16,17 @@ this is the right thing to do, because we are professionals.
 I do see that most of the engineers do not know how to build proper markup. Even in some famous frameworks, design 
 libraries are build incorrectly. `<div>` tags are used everywhere, anywhere without thinking.  
 
+
+## Testing
+
+### Text Spacing
+Text spacing accessibility testing is necessary because many users rely on customized spacing to read and understand 
+content comfortably. Supports users with low vision, dyslexia, and cognitive disabilities. For organizations following 
+ADA, Section 508, or international accessibility laws, supporting text spacing is a mandatory part of WCAG compliance.
+
+You can use the [text spacing bookmarklet](tools/text-spacing-bookmarklet.md) to test your web pages and applications. 
+
+Text spacing adjustments apply to all content on the page except in cases where the user agent or platform does not 
+permit overriding the default text spacing. Common exceptions include embedded `video` captions, images of text, **custom 
+elements** with styles encapsulated in the **Shadow DOM**, the `<option>` list of a `<select>` element, and the 
+**date picker** interface of an `<input type="date">` element.
