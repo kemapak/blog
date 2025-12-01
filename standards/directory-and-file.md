@@ -18,7 +18,7 @@ Directory names must clearly reflect their purpose.
 - /src/style
 - /documentation/code-review
 
-### DF-02 - Image, Video, Font File Naming Convention
+### DF-02 - Image, Video, Font, Markdown File Naming Convention
 File names should clearly describe what the file is and where it is used.
 - All lowercase
 - Words separated by hyphens (-)
@@ -34,6 +34,9 @@ File names should clearly describe what the file is and where it is used.
 - sale-banner.jpeg
 - welcome.mov
 - password-settings.svg
+- directory-and-file.md
+
+> For the main/index level documentation you can use `README.md` file name for markdown file.
 
 ### DF-03 - HTML File Naming Convention
 File names should clearly describe what the file is and where it is used.
