@@ -130,7 +130,7 @@ All class/selector names should clearly describe what the file is and where it i
 - **Comment only exceptions and things you cannot explain with code.**
 - **Instead of adding a comment try to have better selector name.**
 - **Do not comment unused code**, just remove it!
-- If it is **temporary or exception**, add a TODO, the current date, and your name.
+- If there is a **temporary or exception** case, add a TODO, the current date, and your name.
   - `/* TODO <Date> <Developer Name>: Explanation. */`
 - Start with a space, uppercase letter, end with a period. Just like a regular sentence.
 - Explain exceptions or overrides clearly
