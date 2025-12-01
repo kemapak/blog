@@ -139,7 +139,7 @@ util
         /icon                   # Common icons.
             icons.woff
             icons.css      
-    /common                     # Common file used by all applications and components.
+    /common                     # Common assets used by all applications and components.
         /util
             polyfill.js         
             commonUtil.js             
