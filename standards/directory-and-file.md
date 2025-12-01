@@ -1,5 +1,16 @@
 # Directory and File Standards
 
+## Table of Contents
+* [Table of Contents](#table-of-contents)
+* [Directory & File Names](#directory--file-names)
+    * [DF-01 – Directory Naming Convention](#df-01--directory-naming-convention)
+    * [DF-02 - Image, Video, Font, Markdown File Naming Convention](#df-02---image-video-font-markdown-file-naming-convention)
+    * [DF-03 - HTML File Naming Convention](#df-03---html-file-naming-convention)
+    * [DF-04 - CSS File Naming Convention](#df-04---css-file-naming-convention)
+    * [DF-05 - JavaScript File Naming Convention](#df-05---javascript-file-naming-convention)
+* [File Grouping and Organization](#file-grouping-and-organization)
+    * [DF-06 Keep Related Files Together](#df-06-keep-related-files-together)
+
 ## Directory & File Names
 
 ### DF-01 – Directory Naming Convention
