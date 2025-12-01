@@ -9,7 +9,7 @@
     * [DF-04 - CSS File Naming Convention](#df-04---css-file-naming-convention)
     * [DF-05 - JavaScript File Naming Convention](#df-05---javascript-file-naming-convention)
 * [File Grouping and Organization](#file-grouping-and-organization)
-    * [DF-06 Keep Related Files Together](#df-06-keep-related-files-together)
+    * [DF-06 - Keep Related Files Together](#df-06---keep-related-files-together)
 
 ## Directory & File Names
 
@@ -110,7 +110,7 @@ util
 
 ## File Grouping and Organization
 
-### DF-06 Keep Related Files Together
+### DF-06 - Keep Related Files Together
 - Group related files inside the same folder.
 - Place common assets used by multiple applications inside a `common` folder.
 
