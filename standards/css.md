@@ -36,8 +36,11 @@ File names should clearly describe what the file is and where it is used.
 - No abbreviations unless formally agreed upon
 
 **Format**:
-\[_name_\]*-_name_.css
-([] = optional, * = zero or more)
+```text
+[name-]*name.css
+```
+
+`[] = optional, * = zero or more`
 
 **Examples**:
 - helper.css
@@ -87,7 +90,7 @@ All class/selector names should clearly describe what the file is and where it i
 
 ### CSS-06 – Whitespace, Indentation & Line Length
 - Use 2-character tabs for indentation.
-- 140-character maximum line length.
+- 120 character maximum line length.
 - Single space between property operator and value.
 - Closing brace on its own line.
 - Separate logical groups with blank lines.
