@@ -218,7 +218,7 @@ HTML comment.
 </div>
 ```
 
-### HTML-15 – USE Semantic HTML Tags
+### HTML-15 – Use Semantic HTML Tags
 - Do not use deprecated tags (e.g. `<font>`).
 - Use semantic tags correctly:
 - `<header>` for headers.
