@@ -18,7 +18,7 @@
   * [HTML-10 – Use Custom Web Components (Modularize your code!)](#html-10--use-custom-web-components-modularize-your-code)
   * [HTMLSS-11 – Block vs Inline Elements](#htmlss-11--block-vs-inline-elements)
   * [HTML-12 – USE Semantic HTML Tags](#html-12--use-semantic-html-tags)
-  * [HTML-12 – Markup Validation](#html-12--markup-validation)
+  * [HTML-13 – Markup Validation](#html-13--markup-validation)
 
 ## Files and Directory
 
@@ -233,5 +233,5 @@ HTML comment.
 - `<details> and <summary>` for expandable/collapsible content.
 - `<div>` use for generic containers, not everything. 
 
-### HTML-12 – Markup Validation
+### HTML-13 – Markup Validation
 - Validate your markup regularly! [W3C VALIDATOR](https://validator.w3.org/#validate_by_input)
