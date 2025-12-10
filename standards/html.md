@@ -185,7 +185,7 @@ HTML comment.
 - Build **reusable components**.
 - **Extend HTML elements** to do more things.
 
-### HTMLSS-11 – Block vs Inline Elements
+### HTML-11 – Block vs Inline Elements
 - **Do not** place block elements inside inline elements.
 - Wrap inline elements inside suitable block elements instead.
 
