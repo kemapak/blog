@@ -5,20 +5,21 @@
   * [HTML-01 One HTML per View or Component](#html-01-one-html-per-view-or-component)
   * [HTML-02 - HTML File Naming Convention](#html-02---html-file-naming-convention)
 * [Style and Syntax](#style-and-syntax)
-  * [HTML-01 – Element and Attribute Naming](#html-01--element-and-attribute-naming)
-  * [HTML-02 – Attribute Quotes](#html-02--attribute-quotes)
-  * [HTML-03 – Tag Closures](#html-03--tag-closures)
-  * [HTML-04 – Custom Attributes](#html-04--custom-attributes)
-  * [HTML-05 – Whitespace, Indentation, Line Length](#html-05--whitespace-indentation-line-length)
-  * [HTML-06 – Comments](#html-06--comments)
-  * [HTML-07 – ID Naming Conventions](#html-07--id-naming-conventions)
-  * [HTML-08 – Do not use `type="text/javascript"` in `<script>` tags](#html-08--do-not-use-typetextjavascript-in-script-tags)
-  * [HTML-08 – Do no use Inline Styles](#html-08--do-no-use-inline-styles)
-  * [HTML-09 – Avoid JavaScript in Markup](#html-09--avoid-javascript-in-markup)
-  * [HTML-10 – Use Custom Web Components (Modularize your code!)](#html-10--use-custom-web-components-modularize-your-code)
-  * [HTMLSS-11 – Block vs Inline Elements](#htmlss-11--block-vs-inline-elements)
-  * [HTML-12 – USE Semantic HTML Tags](#html-12--use-semantic-html-tags)
-  * [HTML-13 – Markup Validation](#html-13--markup-validation)
+  * [HTML-03 – Element and Attribute Naming](#html-03--element-and-attribute-naming)
+  * [HTML-04 – Attribute Quotes](#html-04--attribute-quotes)
+  * [HTML-05 – Tag Closures](#html-05--tag-closures)
+  * [HTML-06 – Custom Attributes](#html-06--custom-attributes)
+  * [HTML-07 – Whitespace, Indentation, Line Length](#html-07--whitespace-indentation-line-length)
+  * [HTML-08 – Comments](#html-08--comments)
+  * [HTML-09 – ID Naming Conventions](#html-09--id-naming-conventions)
+  * [HTML-10 – Do not use `type="text/javascript"` in `<script>` tags](#html-10--do-not-use-typetextjavascript-in-script-tags)
+  * [HTML-11 – Do no use Inline Styles](#html-11--do-no-use-inline-styles)
+  * [HTML-12 – Avoid JavaScript in Markup](#html-12--avoid-javascript-in-markup)
+  * [HTML-13 – Use Custom Web Components (Modularize your code!)](#html-13--use-custom-web-components-modularize-your-code)
+  * [HTML-14 – Block vs Inline Elements](#html-14--block-vs-inline-elements)
+  * [HTML-15 – USE Semantic HTML Tags](#html-15--use-semantic-html-tags)
+  * [HTML-16 – Markup Validation](#html-16--markup-validation)
+
 
 ## Files and Directory
 
@@ -47,7 +48,7 @@ File names should clearly describe what the file is and where it is used.
 
 ## Style and Syntax
 
-### HTML-01 – Element and Attribute Naming
+### HTML-03 – Element and Attribute Naming
 - All tag names and attribute names **must be lowercase**.
 - Multi-word names **must use hyphens (-)**.
 
@@ -57,7 +58,7 @@ File names should clearly describe what the file is and where it is used.
 <custom-component type="alpha" data-usage="beta"></custom-component>
 <bar-chart series="[]" settings="{}"></bar-chart>
 ```
-### HTML-02 – Attribute Quotes
+### HTML-04 – Attribute Quotes
 - Attribute values **must use double quotes**.
 
 **Examples**:
@@ -69,7 +70,7 @@ File names should clearly describe what the file is and where it is used.
 </ul>
 ```
 
-### HTML-03 – Tag Closures
+### HTML-05 – Tag Closures
 - All elements **must be properly closed**.
 - Elements with content require closing tags.
 - Self-contained (“void”) elements must end with `/>`.
@@ -81,7 +82,7 @@ File names should clearly describe what the file is and where it is used.
 <input type="text" class="form-input" />
 ```
 
-### HTML-04 – Custom Attributes
+### HTML-06 – Custom Attributes
 - Prefix all custom attributes with `data-` for native HTML tags.
 - Custom components attributes do not need to use `data-` prefix.
 
@@ -93,7 +94,7 @@ File names should clearly describe what the file is and where it is used.
 </custom-card>
 ```
 
-### HTML-05 – Whitespace, Indentation, Line Length
+### HTML-07 – Whitespace, Indentation, Line Length
 - Use 2-space indentation.
 - Max 120 characters per line before wrapping.
 - No space around `=` in attributes (`id="menu"`, **not** `id = "menu"`).
@@ -113,7 +114,7 @@ File names should clearly describe what the file is and where it is used.
 </nav>
 ```
 
-### HTML-06 – Comments
+### HTML-08 – Comments
 - **Comment only exceptions and things you cannot explain with code.**
 - **Do not comment unused code**, just remove it!
 - If there is a **temporary or exception** case, add a TODO, the current date, and your name.
@@ -131,7 +132,7 @@ HTML comment.
 -->
 ```
 
-### HTML-07 – ID Naming Conventions
+### HTML-09 – ID Naming Conventions
 - ID names **must clearly describe** what it is and where it is used.
 - Start with lowercase
 - Words separated with camelcase
@@ -148,7 +149,7 @@ HTML comment.
 <section id="firstSeatSelection"></section>
 ```
 
-### HTML-08 – Do not use `type="text/javascript"` in `<script>` tags
+### HTML-10 – Do not use `type="text/javascript"` in `<script>` tags
 - This is deprecated do not use!
 
 **Examples**: 
@@ -157,7 +158,7 @@ HTML comment.
 <script type="text/javascript" src="../src/common/util.js"></script>
 ```
 
-### HTML-08 – Do no use Inline Styles
+### HTML-11 – Do no use Inline Styles
 - Avoid using inline `style` attribute. Use CSS classes instead.
 
 **Examples**:
@@ -169,7 +170,7 @@ HTML comment.
 <div class="page-top-block"></div>
 ```
 
-### HTML-09 – Avoid JavaScript in Markup
+### HTML-12 – Avoid JavaScript in Markup
 - Avoid embedding JavaScript code in HTML attributes (`onclick`, etc.). Unless you are using a framework that requires it.
 - Configuration-only initialization is OK.
 
@@ -179,13 +180,13 @@ HTML comment.
 <button onclick="avoidDoingThis();"></button>
 ```
 
-### HTML-10 – Use Custom Web Components (Modularize your code!)
+### HTML-13 – Use Custom Web Components (Modularize your code!)
 - This is the best thing happen to web since AJAX!
 - Move complex markup into web components to **simplify** and **modularize** your code.
 - Build **reusable components**.
 - **Extend HTML elements** to do more things.
 
-### HTML-11 – Block vs Inline Elements
+### HTML-14 – Block vs Inline Elements
 - **Do not** place block elements inside inline elements.
 - Wrap inline elements inside suitable block elements instead.
 
@@ -217,7 +218,7 @@ HTML comment.
 </div>
 ```
 
-### HTML-12 – USE Semantic HTML Tags
+### HTML-15 – USE Semantic HTML Tags
 - Do not use deprecated tags (e.g. `<font>`).
 - Use semantic tags correctly:
 - `<header>` for headers.
@@ -233,5 +234,5 @@ HTML comment.
 - `<details> and <summary>` for expandable/collapsible content.
 - `<div>` use for generic containers, not everything. 
 
-### HTML-13 – Markup Validation
+### HTML-16 – Markup Validation
 - Validate your markup regularly! [W3C VALIDATOR](https://validator.w3.org/#validate_by_input)
