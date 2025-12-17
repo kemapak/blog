@@ -88,24 +88,40 @@ File names should clearly describe what the file is and where it is used.
 - Utilities start with lowercase
 - Words separated with camelcase
 - No abbreviations unless formally agreed upon
+- Unit tests have `test` postfix
+- Models have `model` postfix
+- Config have `config` postfix
+- JavaScript files end with `.js`
+- JSON files end with `.json`
 
 **Format**:
 ```text
 class
 [Name]*Name.js
+[Name]*Name.type.js
 
 or
 
-util
+other
 [name]*Name.js
+[name]*Name.json
+[name]*Name.type.js
+[name]*Name.type.json
 ```
 
 **Examples**:
 - Card.js
+- Card.test.js
 - AdminUser.js
+- AdminUser.model.js
 - PhoneCatalog.js
-- utility.js
-- dataVisualizationUtility.js
+- PhoneCatalog.test.js
+- util.js
+- util.test.js
+- dataVisualization.util.js
+- dataVisualization.util.test.js
+- config.json
+- userData.json
 - index.js
 
 ## File Grouping and Organization
