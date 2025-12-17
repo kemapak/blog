@@ -1,7 +1,6 @@
 # Directory and File Standards
 
 ## Table of Contents
-* [Table of Contents](#table-of-contents)
 * [Directory & File Names](#directory--file-names)
     * [DF-01 – Directory Naming Convention](#df-01--directory-naming-convention)
     * [DF-02 - Image, Video, Font, Markdown File Naming Convention](#df-02---image-video-font-markdown-file-naming-convention)
