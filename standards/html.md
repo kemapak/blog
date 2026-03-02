@@ -1,24 +1,24 @@
 # HTML Coding Standards
 
 ## Table of Contents
-* [Files and Directory](#files-and-directory)
-  * [HTML-01 One HTML per View or Component](#html-01-one-html-per-view-or-component)
-  * [HTML-02 - HTML File Naming Convention](#html-02---html-file-naming-convention)
-* [Style and Syntax](#style-and-syntax)
-  * [HTML-03 – Element and Attribute Naming](#html-03--element-and-attribute-naming)
-  * [HTML-04 – Attribute Quotes](#html-04--attribute-quotes)
-  * [HTML-05 – Tag Closures](#html-05--tag-closures)
-  * [HTML-06 – Custom Attributes](#html-06--custom-attributes)
-  * [HTML-07 – Whitespace, Indentation, Line Length](#html-07--whitespace-indentation-line-length)
-  * [HTML-08 – Comments](#html-08--comments)
-  * [HTML-09 – ID Naming Conventions](#html-09--id-naming-conventions)
-  * [HTML-10 – Do not use `type="text/javascript"` in `<script>` tags](#html-10--do-not-use-typetextjavascript-in-script-tags)
-  * [HTML-11 – Do no use Inline Styles](#html-11--do-no-use-inline-styles)
-  * [HTML-12 – Avoid JavaScript in Markup](#html-12--avoid-javascript-in-markup)
-  * [HTML-13 – Use Custom Web Components (Modularize your code!)](#html-13--use-custom-web-components-modularize-your-code)
-  * [HTML-14 – Block vs Inline Elements](#html-14--block-vs-inline-elements)
-  * [HTML-15 – USE Semantic HTML Tags](#html-15--use-semantic-html-tags)
-  * [HTML-16 – Markup Validation](#html-16--markup-validation)
+- [Files and Directory](#files-and-directory)
+  - [HTML-01 One HTML per View or Component](#html-01-one-html-per-view-or-component)
+  - [HTML-02 - HTML File Naming Convention](#html-02---html-file-naming-convention)
+- [Style and Syntax](#style-and-syntax)
+  - [HTML-03 – Element and Attribute Naming](#html-03--element-and-attribute-naming)
+  - [HTML-04 – Attribute Quotes](#html-04--attribute-quotes)
+  - [HTML-05 – Tag Closures](#html-05--tag-closures)
+  - [HTML-06 – Custom Attributes](#html-06--custom-attributes)
+  - [HTML-07 – Whitespace, Indentation, Line Length](#html-07--whitespace-indentation-line-length)
+  - [HTML-08 – Comments](#html-08--comments)
+  - [HTML-09 – ID Naming Conventions](#html-09--id-naming-conventions)
+  - [HTML-10 – Do not use `type="text/javascript"` in `<script>` tags](#html-10--do-not-use-typetextjavascript-in-script-tags)
+  - [HTML-11 – Do no use Inline Styles](#html-11--do-no-use-inline-styles)
+  - [HTML-12 – Avoid JavaScript in Markup](#html-12--avoid-javascript-in-markup)
+  - [HTML-13 – Use Custom Web Components (Modularize your code!)](#html-13--use-custom-web-components-modularize-your-code)
+  - [HTML-14 – Block vs Inline Elements](#html-14--block-vs-inline-elements)
+  - [HTML-15 – USE Semantic HTML Tags](#html-15--use-semantic-html-tags)
+  - [HTML-16 – Markup Validation](#html-16--markup-validation)
 
 
 ## Files and Directory
@@ -29,7 +29,7 @@ Create a dedicated HTML file for each application, view, or component.
 > Do not create an empty HTML file if it is not needed
 
 ### HTML-02 - HTML File Naming Convention
-File names should clearly describe what the file is and where it is used.
+File names should clearly describe what they represent and where they are used.
 - All lowercase
 - Words separated by hyphens (-)
 - No abbreviations unless formally agreed upon
@@ -95,7 +95,7 @@ File names should clearly describe what the file is and where it is used.
 ```
 
 ### HTML-07 – Whitespace, Indentation, Line Length
-- Use 2-space indentation.
+- Use **2 spaces** for indentation.
 - Max 120 characters per line before wrapping.
 - No space around `=` in attributes (`id="menu"`, **not** `id = "menu"`).
 - Separate logical blocks with one blank line.
@@ -176,7 +176,7 @@ HTML comment.
 
 **Examples**:
 ```html
-<! Avoid -->
+<!-- Avoid -->
 <button onclick="avoidDoingThis();"></button>
 ```
 
@@ -223,7 +223,7 @@ HTML comment.
 - Use semantic tags correctly:
 - `<header>` for headers.
 - `<main>` for the main content.
-- `<foooter>` for footers.
+- `<footer>` for footers.
 - `<nav>` and `<menu>` for navigation
 - `<strong>` for bold text.
 - `<em>` emphasized italic text.

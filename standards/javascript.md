@@ -4,41 +4,43 @@ This document defines JavaScript coding standards to ensure **readability**, **c
 and easy to follow during day-to-day development.
 
 ## Table of Contents
-* [Files & Directory:](#files--directory)
-  * [DF-01 - JavaScript File Naming Convention](#df-01---javascript-file-naming-convention)
-* [Style & Syntax](#style--syntax)
-  * [JS-02 – Avoid JavaScript When Possible](#js-02--avoid-javascript-when-possible)
-  * [JS-03 – Cohesion & Coupling](#js-03--cohesion--coupling)
-  * [JS-04 – Units of Code](#js-04--units-of-code)
-  * [JS-05 – Naming Conventions](#js-05--naming-conventions)
-  * [JS-06 – Semicolons](#js-06--semicolons)
-  * [JS-07 - Commas](#js-07---commas)
-  * [JS-08 – Whitespace & Formatting](#js-08--whitespace--formatting)
-  * [JS-09 – Strings](#js-09--strings)
-  * [JS-10 – Curly Braces](#js-10--curly-braces)
-  * [JS-11 – Comments](#js-11--comments)
-  * [JS-12 – Derivable Properties](#js-12--derivable-properties)
-  * [JS-13 – Conditionals & Equality](#js-13--conditionals--equality)
-  * [JS-14 – Loops](#js-14--loops)
-  * [JS-15 – Variables & Scope](#js-15--variables--scope)
-  * [JS-16 – Strict Mode](#js-16--strict-mode)
-  * [JS-17 – Anonymous Functions](#js-17--anonymous-functions)
-  * [JS-18 – Inner Functions & Closures](#js-18--inner-functions--closures)
-  * [JS-19 – this Keyword](#js-19--this-keyword)
-  * [JS-20 – Exception Handling](#js-20--exception-handling)
-  * [JS-21 – DOM Manipulation](#js-21--dom-manipulation)
-  * [JS-22 - Private Methods and Fields](#js-22---private-methods-and-fields)
-  * [JS-23 - Static Methods and Fields](#js-23---static-methods-and-fields)
-  * [JS-24 - Use getters and setters for private fields](#js-24---use-getters-and-setters-for-private-fields)
-  * [JS-25 – Inline JavaScript](#js-25--inline-javascript)
-  * [JS-26 – External JavaScript](#js-26--external-javascript)
-  * [JS-99 – Always Refactor](#js-99--always-refactor)
-
+- [Files & Directory:](#files--directory)
+  - [JS-01 - JavaScript File Naming Convention](#js-01---javascript-file-naming-convention)
+- [Style & Syntax](#style--syntax)
+  - [JS-02 – Avoid JavaScript When Possible](#js-02--avoid-javascript-when-possible)
+  - [JS-03 – Cohesion & Coupling](#js-03--cohesion--coupling)
+  - [JS-04 – Units of Code](#js-04--units-of-code)
+  - [JS-05 – Naming Conventions](#js-05--naming-conventions)
+  - [JS-06 – Semicolons](#js-06--semicolons)
+  - [JS-07 - Commas](#js-07---commas)
+  - [JS-08 – Whitespace & Formatting](#js-08--whitespace--formatting)
+  - [JS-09 – Strings](#js-09--strings)
+  - [JS-10 – Curly Braces](#js-10--curly-braces)
+  - [JS-11 – Comments](#js-11--comments)
+  - [JS-12 – Derivable Properties](#js-12--derivable-properties)
+  - [JS-13 – Conditionals & Equality](#js-13--conditionals--equality)
+  - [JS-14 – Loops](#js-14--loops)
+  - [JS-15 – Variables & Scope](#js-15--variables--scope)
+  - [JS-16 – Strict Mode](#js-16--strict-mode)
+  - [JS-17 – Anonymous Functions](#js-17--anonymous-functions)
+  - [JS-18 – Inner Functions & Closures](#js-18--inner-functions--closures)
+  - [JS-19 – this Keyword](#js-19--this-keyword)
+  - [JS-20 – Private Methods and Fields](#js-20--private-methods-and-fields)
+  - [JS-21 – Static Methods and Fields](#js-21--static-methods-and-fields)
+  - [JS-22 – Use Getters and Setters for Private Fields](#js-22--use-getters-and-setters-for-private-fields)
+  - [JS-23 – Exception Handling](#js-23--exception-handling)
+  - [JS-24 – DOM Manipulation](#js-24--dom-manipulation)
+  - [JS-25 - Private Methods and Fields](#js-25---private-methods-and-fields)
+  - [JS-26 - Static Methods and Fields](#js-26---static-methods-and-fields)
+  - [JS-27 - Use getters and setters for private fields](#js-27---use-getters-and-setters-for-private-fields)
+  - [JS-28 – Inline JavaScript](#js-28--inline-javascript)
+  - [JS-29 – External JavaScript](#js-29--external-javascript)
+  - [JS-99 – Always Refactor](#js-99--always-refactor)
 
 
 ## Files & Directory:
 
-### DF-01 - JavaScript File Naming Convention
+### JS-01 - JavaScript File Naming Convention
 File names should clearly describe **what the file is** and **how it is used**.
 - Classes start with uppercase.
 - Utilities start with lowercase.
@@ -229,7 +231,7 @@ let greet = (name) => { console.log(`Hello, ${name}!`); };
 ```javascript
 // This explains intent.
 
-// TODO 12-12-20205 @Kem: Need to update some setting.
+// TODO 12-12-2025 @Kem: Need to update some setting.
 ```
 
 **Block Comments**
@@ -272,7 +274,7 @@ Which is not possible to convey just with code.
 let minutesInADay = 24 * 60;
 
 // OK
-// 24 * 60
+// 24 hours * 60 minutes.
 let minutesInADay = 1440; 
 ```
 
@@ -327,7 +329,7 @@ for (let index = 0, maxIndex = collection.length; index < maxIndex; index++) {
 var userName = 'JohnDoe';
 
 // Not OK
-for (var userIndex = 0, numberUsers = 10; userIndex <= numberOfUsers; userIndex++) {
+for (var userIndex = 0, numberOfUsers = 10; userIndex <= numberOfUsers; userIndex++) {
     // Some loop logic.
 }
 
@@ -335,7 +337,7 @@ for (var userIndex = 0, numberUsers = 10; userIndex <= numberOfUsers; userIndex+
 let userName = 'JohnDoe';
 
 // OK
-for (let userIndex = 0, numberUsers = 10; userIndex <= numberOfUsers; userIndex++) {
+for (let userIndex = 0, numberOfUsers = 10; userIndex <= numberOfUsers; userIndex++) {
     // Some loop logic.
 }
 
@@ -364,37 +366,78 @@ const MAX_USERS = 10;
 - Use `this` keyword in classes, arrow functions and interface functions.
 - Avoid using alias variables like `self`, `_this`, `that` to `this`.
 
+### JS-20 – Private Methods and Fields
+- Use `#` to indicate private methods and fields in your classes
+- Avoid using `_` prefix to indicate private methods and fields
+
+### JS-21 – Static Methods and Fields
+- Use `static` keyword to indicate class methods and fields
+
+### JS-22 – Use Getters and Setters for Private Fields
+- Provide controlled access to class private fields
+- Provides encapsulation, logic execution, and data validation when setting private fields
+
 **Example**:
 ```javascript
 // Not OK
 let self = this;
 ```
 
-### JS-20 – Exception Handling
+### JS-23 – Exception Handling
 - Throw meaningful errors at low level functions and methods.
-- High level methods shold only catch (handle) exceptions.
+- High level methods should only catch (handle) exceptions.
 - Document exceptions using JSDoc.
 
-> Read [how to code - exception and error hanlding](../how-to-code/topics/exception-and-error-handling.md) to learn more.
+> Read [how to code - exception and error handling](../how-to-code/topics/exception-and-error-handling.md) to learn more.
 
-### JS-21 – DOM Manipulation
+### JS-24 – DOM Manipulation
 - Use `DocumentFragment` when creating dom structures. Add the fragments to DOM after it is complete.
 - Prefer template literals strings `\``.
 - Modify DOM via CSS classes and avoid updating inline styles.
 - Avoid embedding CSS and HTML in JavaScript.
 
-### JS-22 - Private Methods and Fields
+### JS-25 - Private Methods and Fields
 - Use (`#`) to indicate private methods and fields in your classes.
 - Avoid using (`_`) prefix to indicate private methods and fields.
 
-### JS-23 - Static Methods and Fields
+### JS-26 - Static Methods and Fields
 - Use `static` keyword to indicate class methods and fields.
 
-### JS-24 - Use getters and setters for private fields
+### JS-27 - Use getters and setters for private fields
 - Provide controlled access to class private fields.
 - Provides encapsulation, logic execution, data validation setting private fields.
 
-### JS-25 – Inline JavaScript
+**Example**:
+```javascript
+class User {
+  // Private field.  
+  #name; 
+
+  constructor(name) {
+    this.#name = name;
+  }
+
+  get name() {
+    return this.#name;
+  }
+
+  set name(value) {
+    if (!value || value.trim() === "") {
+      throw new Error('Name cannot be empty');
+    }
+    this.#name = value;
+  }
+}
+
+// usage
+const user = new User('John');
+
+console.log(user.name);   // getter "John"
+user.name = 'Josh';       // setter
+console.log(user.name);   // getter "Josh"
+```
+
+### JS-28 – Inline JavaScript
 - Inline JavaScript must be avoided.
 
 **Allowed exception**:
@@ -435,7 +478,7 @@ let self = this;
 <input type="text" [value]="name" />
 ```
 
-### JS-26 – External JavaScript
+### JS-29 – External JavaScript
 - All JavaScript logic must reside in external files.
 - Each file must have a single, clear responsibility.
 - One class per file.

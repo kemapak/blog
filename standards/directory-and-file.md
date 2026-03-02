@@ -1,19 +1,19 @@
 # Directory and File Standards
 
 ## Table of Contents
-* [Directory & File Names](#directory--file-names)
-    * [DF-01 – Directory Naming Convention](#df-01--directory-naming-convention)
-    * [DF-02 - Image, Video, Font, Markdown File Naming Convention](#df-02---image-video-font-markdown-file-naming-convention)
-    * [DF-03 - HTML File Naming Convention](#df-03---html-file-naming-convention)
-    * [DF-04 - CSS File Naming Convention](#df-04---css-file-naming-convention)
-    * [DF-05 - JavaScript File Naming Convention](#df-05---javascript-file-naming-convention)
-* [File Grouping and Organization](#file-grouping-and-organization)
-    * [DF-06 - Keep Related Files Together](#df-06---keep-related-files-together)
+- [Directory & File Names](#directory--file-names)
+    - [DF-01 – Directory Naming Convention](#df-01--directory-naming-convention)
+    - [DF-02 - Image, Video, Font, Markdown File Naming Convention](#df-02---image-video-font-markdown-file-naming-convention)
+    - [DF-03 - HTML File Naming Convention](#df-03---html-file-naming-convention)
+    - [DF-04 - CSS File Naming Convention](#df-04---css-file-naming-convention)
+    - [DF-05 - JavaScript File Naming Convention](#df-05---javascript-file-naming-convention)
+- [File Grouping and Organization](#file-grouping-and-organization)
+    - [DF-06 - Keep Related Files Together](#df-06---keep-related-files-together)
 
 ## Directory & File Names
 
 ### DF-01 – Directory Naming Convention
-Directory names must clearly reflect their purpose.
+Directory names should clearly describe **what the group is** and **how it is used**.
 - Start with lowercase
 - Words separated by hyphens (-)
 - No abbreviations unless formally agreed upon
@@ -29,7 +29,7 @@ Directory names must clearly reflect their purpose.
 - /documentation/code-review
 
 ### DF-02 - Image, Video, Font, Markdown File Naming Convention
-File names should clearly describe what the file is and where it is used.
+File names should clearly describe **what the file is** and **how it is used**.
 - All lowercase
 - Words separated by hyphens (-)
 - No abbreviations unless formally agreed upon
@@ -49,79 +49,13 @@ File names should clearly describe what the file is and where it is used.
 > For the main/index level documentation you can use `README.md` file name for markdown file.
 
 ### DF-03 - HTML File Naming Convention
-File names should clearly describe what the file is and where it is used.
-- All lowercase
-- Words separated by hyphens (-)
-- No abbreviations unless formally agreed upon
-
-**Format**:
-```text
-[name-]*name.html
-```
-
-**Examples**:
-- home.html
-- phone-catalog.html
-- index.html
+Please check [HTML Coding Standards](html.md#html-02---html-file-naming-convention).
 
 ### DF-04 - CSS File Naming Convention
-File names should clearly describe what the file is and where it is used.
-- All lowercase
-- Words separated by hyphens (-)
-- No abbreviations unless formally agreed upon
-
-**Format**:
-```text
-[name-]*name.css
-```
-
-**Examples**:
-- home.css
-- phone-catalog.css
-- normalize.css
-- index.css
+Please check [CSS Coding Standards](css.md#css-02---file-naming-convention).
 
 ### DF-05 - JavaScript File Naming Convention
-File names should clearly describe what the file is and where it is used.
-- Classes start with uppercase
-- Utilities start with lowercase
-- Words separated with camelcase
-- No abbreviations unless formally agreed upon
-- Unit tests have `test` postfix
-- Models have `model` postfix
-- Config have `config` postfix
-- JavaScript files end with `.js`
-- JSON files end with `.json`
-
-**Format**:
-```text
-class
-[Name]*Name.js
-[Name]*Name.type.js
-
-or
-
-other
-[name]*Name.js
-[name]*Name.json
-[name]*Name.type.js
-[name]*Name.type.json
-```
-
-**Examples**:
-- Card.js
-- Card.test.js
-- AdminUser.js
-- AdminUser.model.js
-- PhoneCatalog.js
-- PhoneCatalog.test.js
-- util.js
-- util.test.js
-- dataVisualization.util.js
-- dataVisualization.util.test.js
-- config.json
-- userData.json
-- index.js
+Please check [JavaScript Coding Standards](javascript.md#js-01---javascript-file-naming-convention).
 
 ## File Grouping and Organization
 

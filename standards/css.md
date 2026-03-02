@@ -1,24 +1,24 @@
 # CSS Coding Standards
 
 # Table of Contents
-* [Files & Directory:](#files--directory)
-  * [CSS-01 - One CSS per View or Component:](#css-01---one-css-per-view-or-component)
-  * [CSS-02 - File Naming Convention:](#css-02---file-naming-convention)
-* [Style and Syntax](#style-and-syntax)
-  * [CSS-03 - Class/Selector Names](#css-03---classselector-names)
-  * [CSS-04 - Quotes](#css-04---quotes)
-  * [CSS-05 - Semicolon](#css-05---semicolon)
-  * [CSS-06 – Whitespace, Indentation & Line Length](#css-06--whitespace-indentation--line-length)
-  * [CSS-07 - Curly Braces](#css-07---curly-braces-)
-  * [CSS-08 - Comments](#css-08---comments)
-  * [CSS-09 - Never Use !important:](#css-09---never-use-important)
-  * [CSS-10 - Color Codes:](#css-10---color-codes)
-  * [CSS-11 - Grouping Properties:](#css11---grouping-properties)
-  * [CSS-12 - Box Model:](#css-12---box-model)
-  * [CSS-13 - Promotion and Demotion:](#css-13---promotion-and-demotion)
-  * [CSS-14 - Absolute Positioning and Floating:](#css-14---absolute-positioning-and-floating)
-  * [CSS-15 - Overriding Core Classes:](#css-15---overriding-core-classes)
-  * [CSS-16 – Do Not Write CSS](#css-16--do-not-write-css)
+- [Files & Directory:](#files--directory)
+  - [CSS-01 - One CSS per View or Component:](#css-01---one-css-per-view-or-component)
+  - [CSS-02 - File Naming Convention:](#css-02---file-naming-convention)
+- [Style and Syntax](#style-and-syntax)
+  - [CSS-03 - Class/Selector Names](#css-03---classselector-names)
+  - [CSS-04 - Quotes](#css-04---quotes)
+  - [CSS-05 - Semicolon](#css-05---semicolon)
+  - [CSS-06 – Whitespace, Indentation & Line Length](#css-06--whitespace-indentation--line-length)
+  - [CSS-07 - Curly Braces](#css-07---curly-braces-)
+  - [CSS-08 - Comments](#css-08---comments)
+  - [CSS-09 - Never Use !important:](#css-09---never-use-important)
+  - [CSS-10 - Color Codes:](#css-10---color-codes)
+  - [CSS-11 - Grouping Properties:](#css-11---grouping-properties)
+  - [CSS-12 - Box Model:](#css-12---box-model)
+  - [CSS-13 - Promotion and Demotion:](#css-13---promotion-and-demotion)
+  - [CSS-14 - Absolute Positioning and Floating:](#css-14---absolute-positioning-and-floating)
+  - [CSS-15 - Overriding Core Classes:](#css-15---overriding-core-classes)
+  - [CSS-16 – Do Not Write CSS](#css-16--do-not-write-css)
 
 ## Files & Directory:
 
@@ -53,13 +53,17 @@ File names should clearly describe what the file is and where it is used.
 ## Style and Syntax
 
 ### CSS-03 - Class/Selector Names
-All class/selector names should clearly describe what the file is and where it is used.
+All class/selector names should clearly describe what they represent and where they are used.
 - All lowercase
 - Words separated by hyphens (-)
 - No abbreviations unless formally agreed upon
 
 **Format**:
-.\[common prefix\]*[-module name][-view name]*[-name]
+```text
+.[common-prefix]-[module-name]-[view-name]-[name]
+```
+
+`[] = required, - = separator`
 
 **Example**:
 - .xyz-settings
@@ -89,8 +93,8 @@ All class/selector names should clearly describe what the file is and where it i
 ```
 
 ### CSS-06 – Whitespace, Indentation & Line Length
-- Use 2-character tabs for indentation.
-- 120 character maximum line length.
+- Use **2 spaces** for indentation.
+- 120 characters maximum per line.
 - Single space between property operator and value.
 - Closing brace on its own line.
 - Separate logical groups with blank lines.
@@ -101,8 +105,8 @@ All class/selector names should clearly describe what the file is and where it i
 **OK**
 ```css
 .xyz-my-class {
-    color: #789ABC; 
-    margin-left: 0.5rem; 
+    color: #789ABC;
+    margin-left: 0.5rem;
     border-radius: 3px;
 }
 ```
@@ -115,7 +119,7 @@ All class/selector names should clearly describe what the file is and where it i
 ### CSS-07 - Curly Braces  
 - Opening brace on same line as selector
 - Closing brace on its own line
-- Blank line between class definitions unless grouped with commas
+- Use a blank line between class definitions unless grouped with commas
 
 **Example**:
 ```css
