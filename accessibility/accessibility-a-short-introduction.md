@@ -32,7 +32,7 @@ building software for everyone! Because this is the right thing to do, because w
   - [Images](#images)
     - [Types](#types)
     - [Tags](#tags)
-  - [Color Contrast & Use of Color](#color-contrast--use-of-color)
+- [Color Contrast & Use of Color](#color-contrast--use-of-color)
 - [Name, Role, Value](#name-role-value)
 - [Notifications aria-live](#notifications-aria-live)
   - [ARIA Live Region Politeness Levels](#aria-live-region-politeness-levels)
@@ -478,7 +478,7 @@ Image tags must be accessible!
 - **Reference**: [W3C Image Tutorial](https://www.w3.org/WAI/tutorials/images/)
 - **Reference**: [deque Creating Accessible SVGs](https://www.deque.com/blog/creating-accessible-svgs/)
 
-### Color Contrast & Use of Color
+## Color Contrast & Use of Color
 
 W3C Understanding Success Criterion 1.4.3: Contrast (Minimum) | WAI | W3C
 
