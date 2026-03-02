@@ -828,9 +828,10 @@ For complex pages, you can provide multiple skip links:
 - **Don't forget `tabindex="-1"`** - Focus won't work in some browsers.
 - **Don't use only `opacity: 0`** - Link remains visible to screen readers but confusing to keyboard users.
 
-**Reference**: [W3C Bypass Blocks - Level A](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html)
-**Reference**: [WebAIM Skip Navigation Links](https://webaim.org/techniques/skipnav/)
-**Reference**: [W3C Technique G1: Adding a link at the top of each page](https://www.w3.org/WAI/WCAG21/Techniques/general/G1)
+
+- **Reference**: [W3C Bypass Blocks - Level A](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html)
+- **Reference**: [WebAIM Skip Navigation Links](https://webaim.org/techniques/skipnav/)
+- **Reference**: [W3C Technique G1: Adding a link at the top of each page](https://www.w3.org/WAI/WCAG21/Techniques/general/G1)
 
 ## Testing
 
