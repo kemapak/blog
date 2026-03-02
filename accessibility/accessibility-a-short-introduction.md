@@ -100,7 +100,7 @@ Learn what are the semantic tags and how to use them.
 - `<details> and <summary>` for expandable/collapsible content.
 - `<div>` use for generic containers, not everything.
 
-**Reference**: [W3C Semantics - WCAG 1.3.1 - Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
+- **Reference**: [W3C Semantics - WCAG 1.3.1 - Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 
 ## Custom Tags (Web Components)
 
@@ -116,8 +116,8 @@ and following their established patterns.
 - Test with screen readers and keyboard-only navigation.
 - Follow W3C design patterns for common interactive components (modals, tabs, accordions, etc.).
 
-**Reference**: [W3C ARIA Authoring Practices Guide (APG) Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/)
-**Reference**: [W3C Web Components and Accessibility](https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/)
+- **Patterns**: [W3C ARIA Authoring Practices Guide (APG) Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/)
+- **Reference**: [W3C Web Components and Accessibility](https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/)
 
 ## ARIA or ROLE
 
@@ -238,7 +238,7 @@ incorrectly.
 <label for="firstName" >First Name:</label><input type="text" id="firstName" />
 ```
 
-**Reference**: [W3C ARIA in HTML](https://www.w3.org/TR/html-aria/)
+- **Reference**: [W3C ARIA in HTML](https://www.w3.org/TR/html-aria/)
 
 ## Page structure and organization
 
@@ -265,7 +265,7 @@ page and the beginning of the main content.
 <h2>Heading levels can skip when starting a new section</h2>
 ```
 
-**Reference**: [W3C Headings](https://www.w3.org/WAI/tutorials/page-structure/headings/)
+- **Reference**: [W3C Headings](https://www.w3.org/WAI/tutorials/page-structure/headings/)
 
 ### Landmarks
 
@@ -299,8 +299,8 @@ The main landmark identifies the primary page content and simplifies screen read
 
 ```
 
-**Reference**: [W3C ARIA Landmarks Example](https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/general-principles.html)
-**Reference**: [W3C Semantics - WCAG 1.3.1 - Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
+- **Reference**: [W3C ARIA Landmarks Example](https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/general-principles.html)
+- **Reference**: [W3C Semantics - WCAG 1.3.1 - Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 
 ## Components and tags
 
@@ -354,7 +354,7 @@ For users of assistive technologies like screen readers, grouping related links 
 </nav>
 ```
 
-**Reference**: [W3C Grouping related links using the nav element](https://www.w3.org/WAI/WCAG21/Techniques/html/H97)
+- **Reference**: [W3C Grouping related links using the nav element](https://www.w3.org/WAI/WCAG21/Techniques/html/H97)
 
 ### Page Title
 Web pages should have clear, descriptive titles.
@@ -377,8 +377,8 @@ Page titles help users understand content and get oriented within the browser.
 <title>Page 3</title>
 ```
 
-**Reference**: [W3C Page Titled - Level A](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
-**Reference**: [W3C Providing descriptive titles for web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)
+- **Reference**: [W3C Page Titled - Level A](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
+- **Reference**: [W3C Providing descriptive titles for web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)
 
 ### Table
 ```html
@@ -407,7 +407,7 @@ Page titles help users understand content and get oriented within the browser.
 </table>
 ```
 
-**Reference**: [W3C F91: Failure of Success Criterion 1.3.1 for not correctly marking up table headers](https://www.w3.org/TR/WCAG20-TECHS/F91.html)
+- **Reference**: [W3C F91: Failure of Success Criterion 1.3.1 for not correctly marking up table headers](https://www.w3.org/TR/WCAG20-TECHS/F91.html)
 
 ### iframe
 - Always name the iframe using the title attribute.
@@ -417,7 +417,7 @@ Page titles help users understand content and get oriented within the browser.
 <iframe title="Visit our registration info page." src="https://softwarenotes.net"></iframe>
 ```
 
-**Reference**: [W3C H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/TR/WCAG20-TECHS/H64.html)
+- **Reference**: [W3C H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/TR/WCAG20-TECHS/H64.html)
 
 ### Images
 Image tags must be accessible!
@@ -475,8 +475,8 @@ Image tags must be accessible!
 </svg>
 ```
 
-**Reference**: [W3C Image Tutorial](https://www.w3.org/WAI/tutorials/images/)
-**Reference**: [deque Creating Accessible SVGs](https://www.deque.com/blog/creating-accessible-svgs/)
+- **Reference**: [W3C Image Tutorial](https://www.w3.org/WAI/tutorials/images/)
+- **Reference**: [deque Creating Accessible SVGs](https://www.deque.com/blog/creating-accessible-svgs/)
 
 ### Color Contrast & Use of Color
 
@@ -490,9 +490,9 @@ attributes like aria-described by or additional helper text.
 
 > Note: check with your accessibility designer for guidance in using the correct color contrast values.
 
-**Reference**: [W3C Contrast Minimum - Level AA](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
-**Reference**: [W3C Failure of Success Criterion 1.4.3, 1.4.6 and 1.4.8 due to specifying foreground colors without specifying background colors or vice versa](https://www.w3.org/WAI/WCAG21/Techniques/failures/F24)
-**Reference**: [W3C Content Structure](https://www.w3.org/WAI/tutorials/page-structure/content/)
+- **Reference**: [W3C Contrast Minimum - Level AA](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
+- **Reference**: [W3C Failure of Success Criterion 1.4.3, 1.4.6 and 1.4.8 due to specifying foreground colors without specifying background colors or vice versa](https://www.w3.org/WAI/WCAG21/Techniques/failures/F24)
+- **Reference**: [W3C Content Structure](https://www.w3.org/WAI/tutorials/page-structure/content/)
 
 ## Name, Role, Value
 
@@ -514,9 +514,9 @@ Name, role and value convey important information about forms to users of assist
 
 > Tip: Native HTML controls automatically meet the WCAG 4.1.2 success criteria when used as designed.
 
-**Reference**: [W3C Name, Role, Value - Level A](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
-**Reference**: [W3C Accordion example](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/examples/accordion/)
-**Patterns**: [W3C Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/)
+- **Reference**: [W3C Name, Role, Value - Level A](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
+- **Reference**: [W3C Accordion example](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/examples/accordion/)
+- **Patterns**: [W3C Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/)
 
 ## Notifications aria-live
 
@@ -663,9 +663,9 @@ showAlert('Session expiring in 2 minutes');
 </script>
 ```
 
-**Reference**: [W3C ARIA Live Regions](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)
-**Reference**: [W3C Using aria-live](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA22)
-**Reference**: [MDN aria-live](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+- **Reference**: [W3C ARIA Live Regions](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)
+- **Reference**: [W3C Using aria-live](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA22)
+- **Reference**: [MDN aria-live](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 
 ## Testing
 
