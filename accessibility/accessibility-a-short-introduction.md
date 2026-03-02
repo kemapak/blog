@@ -100,6 +100,7 @@ Learn what are the semantic tags and how to use them.
 - `<details> and <summary>` for expandable/collapsible content.
 - `<div>` use for generic containers, not everything.
 
+
 - **Reference**: [W3C Semantics - WCAG 1.3.1 - Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 
 ## Custom Tags (Web Components)
