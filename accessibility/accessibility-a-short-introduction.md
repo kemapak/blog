@@ -204,7 +204,7 @@ incorrectly.
 **Example**:
 ```html
 <!-- Incorrect -->
-<button role="link" onclick="window.location.href=https://softwarenotes.net">Software Notes</button>
+<button role="link" onclick="window.location.href='https://softwarenotes.net'">Software Notes</button>
 
 <!-- Correct -->
 <a href="https://softwarenotes.net">Software Notes</a>
@@ -221,18 +221,18 @@ incorrectly.
 <a href="https://softwarenotes.net">Software Notes</a>
 ```
 
-- Do not use ARIA roles to change a semantic HTML control..
+- Do not use ARIA roles to change a semantic HTML control.
 
 **Example**:
 ```html
-<!-- Incorrect -->
+<!-- Incorrect -->"'
 <div role="contentinfo">....<div>
 
 <!-- Correct -->
 <footer>...</footer>
 
 <!-- Incorrect -->
-<button onclick="window.location.href=https://softwarenotes.net" role="link">SoftwareNotes</button>
+<button onclick="window.location.href='https://softwarenotes.net'" role="link">SoftwareNotes</button>
   
 <!-- Correct -->
 <a href="https://softwarenotes.net">Software Notes</a>
