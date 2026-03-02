@@ -53,6 +53,7 @@ building software for everyone! Because this is the right thing to do, because w
   - [General markup, color and structural issues](#general-markup-color-and-structural-issues)
   - [Keyboard](#keyboard)
   - [Screen reader](#screen-reader)
+- [References](#references)
 
 ## Terms
 
@@ -899,3 +900,10 @@ Keyboard commands provide single-key access to objects like:
 - Landmarks
 - Graphics
 - And more
+
+## References
+- [Accessibility Handbook, Katie Cunningham](https://www.ebooks.com/en-us/book/1013438/accessibility-handbook/katie-cunningham/)
+- [Web Accessibility Cookbook, Manuel Matuzovic](https://www.ebooks.com/en-us/book/211381474/web-accessibility-cookbook/manuel-matuzovic/)
+- [MDN Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
+- [W3C Accessibility Standards Overview](https://www.w3.org/WAI/standards-guidelines/)
+- [W3C Accessibility Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/))
