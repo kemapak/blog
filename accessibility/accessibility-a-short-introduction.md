@@ -124,7 +124,7 @@ and following their established patterns.
 - Announce dynamic content changes to screen readers using `aria-live` regions.
 - Maintain focus management when components open, close, or change state.
 - Test with screen readers and keyboard-only navigation.
-- Follow W3C design patterns for common interactive components (modals, tabs, accordions, etc.).
+- Follow W3C design patterns for common interactive components (carousel, tabs, notifications, etc.).
 
 - **Patterns**: [W3C ARIA Authoring Practices Guide (APG) Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/)
 - **Reference**: [W3C Web Components and Accessibility](https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/)
@@ -232,7 +232,7 @@ incorrectly.
 <footer>...</footer>
 
 <!-- Incorrect -->
-<button href="https://www.softwarenotes.net" role="link">SoftwareNotes</button>
+<button onclick="window.location.href=https://softwarenotes.net" role="link">SoftwareNotes</button>
   
 <!-- Correct -->
 <a href="https://softwarenotes.net">Software Notes</a>
