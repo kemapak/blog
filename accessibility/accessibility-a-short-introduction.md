@@ -519,7 +519,52 @@ Name, role and value convey important information about forms to users of assist
 - **Reference**: [W3C Accordion example](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/examples/accordion/)
 - **Patterns**: [W3C Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/)
 
-## Notifications aria-live
+## Tabindex
+
+The `tabindex` attribute controls the keyboard navigation order of elements on a page. While powerful, it should be 
+used sparingly as it can easily break the natural tab order and create a confusing experience for keyboard users.
+
+### Tabindex Values
+
+**`tabindex="0"`** - Makes an element focusable in the natural tab order
+- The element becomes keyboard accessible.
+- Follows the DOM order (like native interactive elements).
+- Use for custom interactive elements that aren't naturally focusable.
+
+**`tabindex="-1"`** - Makes an element programmatically focusable only
+- The element can receive focus via JavaScript (`element.focus()`).
+- Cannot be reached by pressing Tab.
+- Use for skip links, modals, or elements that need focus management.
+
+**`tabindex="1"` or higher** - Creates a specific tab order (**AVOID!**)
+- Values greater than 0 jump to the front of the tab order.
+- Makes maintenance difficult and breaks natural flow.
+- Confuses users and makes pages harder to navigate.
+- **Almost never use positive tabindex values**.
+
+### Best Practices
+
+**Do:**
+- Let the browser handle tab order naturally (no tabindex needed for buttons, links, form elements)
+- Use `tabindex="0"` to make custom widgets focusable.
+- Use `tabindex="-1"` for programmatic focus (modals, error messages, skip link targets).
+- Structure your HTML in logical order - tab order follows DOM order.
+
+**Don't:**
+- Use positive tabindex values (`tabindex="1"`, `tabindex="2"`, etc.)
+- Add tabindex to elements that are already naturally focusable.
+- Change tabindex to fix poor HTML structure - restructure the HTML instead.
+- Use tabindex to make non-interactive elements clickable - use `<button>` instead.
+
+> **Remember**: **The best tabindex is no tabindex**. Proper HTML structure and semantic elements provide natural, 
+> accessible keyboard navigation without any `tabindex` attributes.
+
+
+- **Reference**: [W3C Using tabindex](https://www.w3.org/WAI/WCAG21/Techniques/html/H4)
+- **Reference**: [MDN tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex)
+- **Reference**: [W3C Focus Management](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/)
+
+## Notifications `aria-live`
 
 The `aria-live` attribute is used to announce dynamic content changes to screen reader users. This is crucial for 
 notifications, alerts, status updates, and any content that changes without a page reload.
@@ -667,6 +712,125 @@ showAlert('Session expiring in 2 minutes');
 - **Reference**: [W3C ARIA Live Regions](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)
 - **Reference**: [W3C Using aria-live](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA22)
 - **Reference**: [MDN aria-live](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+
+## Skipping to Main Content
+
+Sometimes web pages are full of links and buttons, making it very hard and time-consuming for users with visual
+disabilities or keyboard-only users to navigate to the main content. Users must tab through dozens of navigation links
+before reaching the actual content on every page visit.
+
+The solution is a "skip to main content" link - an invisible link that appears only when focused, allowing users to
+jump directly to the main content area. This is one of the first WCAG success criteria (2.4.1 Bypass Blocks) and can
+be implemented without JavaScript using the `tabindex="-1"` attribute and basic CSS.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Skip to Main Content Example</title>
+  <style>
+    /* This is for demo purposes, make sure all your CSS rules are declared in external CSS files. */
+    /* Visually hide the skip link until focused. */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      padding: 0.75rem 1rem;
+      z-index: 100;
+      color: #000000;
+      background-color: #FFFFFF;
+      outline: thin solid gray;
+    }
+
+    /* Show the link when it receives keyboard focus. */
+    .skip-link:focus {
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skip link MUST be the FIRST focusable element on the page -->
+  <a href="#main-content" class="skip-link">
+    Skip to main content
+  </a>
+
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+      <!-- Imagine 20+ more links here. -->
+    </nav>
+  </header>
+
+  <!-- The target element with an ID and tabindex="-1". -->
+  <main id="main-content" tabindex="-1">
+    <h1>Main Content Heading</h1>
+    <p>This is where the important content starts. Users can skip all the navigation links above.</p>
+  </main>
+
+  <footer>
+    <cite>&copy; 2024 Example Site</cite>
+  </footer>
+
+</body>
+</html>
+```
+
+### How It Works
+
+1. **The Skip Link (`<a href="#main-content">`)**:
+   - Must be the **first focusable element** on the page.
+   - Links to the main content area using a fragment identifier (`#main-content`).
+   - Hidden off-screen by default (`top: -40px`).
+   - Becomes visible when focused via keyboard (`top: 0`).
+
+2. **The Target (`<main id="main-content" tabindex="-1">`)**:
+   - The `id` attribute matches the skip link's `href`.
+   - `tabindex="-1"` allows programmatic focus (otherwise `<main>` isn't focusable by default).
+   - When clicked, browser jumps to this element and sets focus on it.
+
+3. **CSS Strategy**:
+   - Link is positioned absolutely and moved off-screen.
+   - High `z-index` ensures it appears above other content when visible.
+   - `:focus` pseudo-class brings it into view when keyboard user tabs to it.
+
+### Best Practices
+
+- **Always place the skip link first** - It should be the very first element users encounter when tabbing.
+- **Use descriptive text** - "Skip to main content" is clear and standard.
+- **Make it visible on focus** - Never use `display: none` or `visibility: hidden` which would hide it from screen readers.
+- **Ensure sufficient contrast** - The visible link must meet WCAG color contrast requirements (4.5:1 minimum).
+- **Test with keyboard** - Press Tab when the page loads to verify it appears.
+- **Consider multiple skip links** - Large sites might benefit from "Skip to navigation", "Skip to search", etc.
+
+### Alternative: Multiple Skip Links
+
+For complex pages, you can provide multiple skip links:
+
+```html
+<div class="skip-links">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <a href="#navigation" class="skip-link">Skip to navigation</a>
+  <a href="#search" class="skip-link">Skip to search</a>
+</div>
+```
+
+### Common Mistakes to Avoid
+
+- **Don't use `display: none`** - Screen readers won't announce it.
+- **Don't place it after header elements** - Defeats the purpose.
+- **Don't forget `tabindex="-1"`** - Focus won't work in some browsers.
+- **Don't use only `opacity: 0`** - Link remains visible to screen readers but confusing to keyboard users.
+
+**Reference**: [W3C Bypass Blocks - Level A](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html)
+**Reference**: [WebAIM Skip Navigation Links](https://webaim.org/techniques/skipnav/)
+**Reference**: [W3C Technique G1: Adding a link at the top of each page](https://www.w3.org/WAI/WCAG21/Techniques/general/G1)
 
 ## Testing
 
