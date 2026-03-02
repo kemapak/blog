@@ -13,6 +13,39 @@ Second, I hate politics being brought into accessibility. It is **not inclusive 
 it is **accessible design** and **accessible engineering**. No one is intentionally excluding anyone. We are
 building software for everyone! Because this is the right thing to do, because we are professionals.
 
+## Table of Contents
+- [Terms](#terms)
+- [What areas of accessibility we code for?](#what-areas-of-accessibility-we-code-for)
+- [Tools](#tools)
+- [Semantic tags](#semantic-tags)
+- [Custom Tags (Web Components)](#custom-tags-web-components)
+- [ARIA or ROLE](#aria-or-role)
+- [Page structure and organization](#page-structure-and-organization)
+  - [Headings](#headings)
+  - [Landmarks](#landmarks)
+- [Components and tags](#components-and-tags)
+  - [Lists](#lists)
+  - [Links](#links)
+  - [Page Title](#page-title)
+  - [Table](#table)
+  - [iframe](#iframe)
+  - [Images](#images)
+    - [Types](#types)
+    - [Tags](#tags)
+  - [Color Contrast & Use of Color](#color-contrast--use-of-color)
+- [Name, Role, Value](#name-role-value)
+- [Notifications aria-live](#notifications-aria-live)
+  - [ARIA Live Region Politeness Levels](#aria-live-region-politeness-levels)
+  - [Common Use Cases](#common-use-cases)
+  - [Important Attributes](#important-attributes)
+  - [Best Practices](#best-practices)
+  - [Example: Complete Notification System](#example-complete-notification-system)
+- [Testing](#testing)
+  - [Text Spacing](#text-spacing)
+  - [General markup, color and structural issues](#general-markup-color-and-structural-issues)
+  - [Keyboard](#keyboard)
+  - [Screen reader](#screen-reader)
+
 ## Terms
 
 - **a11y**: Accessibility, there are eleven (11) characters between a and y, therefore a11y.
@@ -461,7 +494,6 @@ attributes like aria-described by or additional helper text.
 **Reference**: [W3C Failure of Success Criterion 1.4.3, 1.4.6 and 1.4.8 due to specifying foreground colors without specifying background colors or vice versa](https://www.w3.org/WAI/WCAG21/Techniques/failures/F24)
 **Reference**: [W3C Content Structure](https://www.w3.org/WAI/tutorials/page-structure/content/)
 
-
 ## Name, Role, Value
 
 Name, role and value convey important information about forms to users of assistive technologies (AT).
@@ -485,6 +517,155 @@ Name, role and value convey important information about forms to users of assist
 **Reference**: [W3C Name, Role, Value - Level A](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 **Reference**: [W3C Accordion example](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/examples/accordion/)
 **Patterns**: [W3C Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/)
+
+## Notifications aria-live
+
+The `aria-live` attribute is used to announce dynamic content changes to screen reader users. This is crucial for 
+notifications, alerts, status updates, and any content that changes without a page reload.
+
+### ARIA Live Region Politeness Levels
+
+- **`aria-live="polite"`**: Announces changes when the screen reader finishes its current task. Used for non-critical updates.
+- **`aria-live="assertive"`**: Interrupts the screen reader immediately to announce the change. Used for important or time-sensitive information.
+- **`aria-live="off"`**: Changes are not announced (default behavior).
+
+### Common Use Cases
+
+**Status Messages** - Use `aria-live="polite"` for general status updates:
+```html
+<div aria-live="polite" aria-atomic="true" class="status-message">
+    <p>Your changes have been saved.</p>
+</div>
+```
+
+**Error Messages** - Use `aria-live="assertive"` for critical errors:
+```html
+<div aria-live="assertive" aria-atomic="true" class="error-message">
+    <p>Error: Payment failed. Please check your card details.</p>
+</div>
+```
+
+**Loading Indicators** - Announce loading states:
+```html
+<div aria-live="polite" aria-busy="true" id="loadingRegion">
+    <p>Loading content, please wait...</p>
+</div>
+```
+
+**Form Validation** - Real-time validation feedback:
+```html
+<label for="email">Email:</label>
+<input type="email" id="email" aria-describedby="emailError" />
+<div id="emailError" aria-live="polite" role="alert">
+    <!-- Error message inserted here dynamically. -->
+</div>
+```
+
+**Toast Notifications** - Temporary notifications:
+```html
+<div aria-live="polite" aria-atomic="true" role="status" class="toast">
+    <p>Item added to cart</p>
+</div>
+```
+
+**Timer/Countdown** - Use `aria-atomic="false"` to announce only changed parts:
+```html
+<div aria-live="polite" aria-atomic="false">
+    Time remaining: <span id="minutes">5</span> minutes <span id="seconds">30</span> seconds.
+</div>
+```
+
+**Search Results Count** - Dynamic result updates:
+```html
+<div aria-live="polite" aria-atomic="true" role="status">
+    <p>Found <span id="resultCount">42</span> results</p>
+</div>
+```
+
+### Important Attributes
+
+- **`aria-atomic="true"`**: Announces the entire region content, even if only part changed.
+- **`aria-atomic="false"`**: Announces only the changed portion (default).
+- **`aria-relevant`**: Specifies what types of changes should be announced:
+  - `additions` - Added nodes
+  - `removals` - Removed nodes
+  - `text` - Text changes
+  - `all` - All changes (default is `additions text`)
+
+### Best Practices
+
+1. **Create the live region on page load** - Don't dynamically add `aria-live` to existing content, as it may not work reliably.
+2. **Keep messages concise** - Screen readers read the entire content.
+3. **Don't overuse assertive** - Only use for critical/urgent messages.
+4. **Use semantic roles** - Combine with `role="status"` or `role="alert"` for better support.
+5. **Avoid rapid updates** - Multiple quick changes can overwhelm users.
+6. **Test with screen readers** - Behavior varies across different screen readers.
+7. **Clear messages after they're read** - Remove or clear old notification content.
+
+### Example: Complete Notification System
+
+```html
+<!-- Status messages (polite) -->
+<div id="statusRegion"
+     aria-live="polite"
+     aria-atomic="true"
+     role="status"
+     class="visually-hidden">
+    <!-- Status messages injected here via JavaScript. -->
+</div>
+
+<!-- Error/Warning messages (assertive) -->
+<div id="alertRegion"
+     aria-live="assertive"
+     aria-atomic="true"
+     role="alert"
+     class="visually-hidden">
+    <!-- Critical messages injected here via JavaScript -->
+</div>
+
+<style>
+/* This is for demo purposes, make sure all your CSS rules are declared in external CSS files. */  
+/* Visually hidden but accessible to screen readers. */
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+</style>
+
+<script>
+// Usage example.
+function showStatus(message) {
+    const statusRegion = document.getElementById('statusRegion');
+    statusRegion.textContent = message;
+
+    // Clear after 5 seconds.
+    setTimeout(() => {
+        statusRegion.textContent = '';
+    }, 5000);
+}
+
+function showAlert(message) {
+    const alertRegion = document.getElementById('alertRegion');
+    alertRegion.textContent = message;
+
+    // Clear after user acknowledges (or after timeout).
+    setTimeout(() => {
+        alertRegion.textContent = '';
+    }, 10000);
+}
+
+// Example usage.
+showStatus('Your profile has been updated');
+showAlert('Session expiring in 2 minutes');
+</script>
+```
+
+**Reference**: [W3C ARIA Live Regions](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)
+**Reference**: [W3C Using aria-live](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA22)
+**Reference**: [MDN aria-live](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 
 ## Testing
 
