@@ -906,4 +906,4 @@ Keyboard commands provide single-key access to objects like:
 - [Web Accessibility Cookbook, Manuel Matuzovic](https://www.ebooks.com/en-us/book/211381474/web-accessibility-cookbook/manuel-matuzovic/)
 - [MDN Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 - [W3C Accessibility Standards Overview](https://www.w3.org/WAI/standards-guidelines/)
-- [W3C Accessibility Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/))
+- [W3C Accessibility Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/)
