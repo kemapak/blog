@@ -226,7 +226,7 @@ incorrectly.
 **Example**:
 ```html
 <!-- Incorrect -->
-<div role="footer">....<div>
+<div role="contentinfo">....<div>
 
 <!-- Correct -->
 <footer>...</footer>
